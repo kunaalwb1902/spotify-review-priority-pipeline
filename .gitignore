@@ -1,0 +1,15 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# raw data (link + checksum in README instead)
+data/raw/*.csv
+data/raw/*.zip
+
+# local state / env
+state/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
