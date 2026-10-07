@@ -1,0 +1,43 @@
+# Run settings. Anything that changes model output is folded into label_config's hash,
+# so editing these invalidates the exact-text result cache (as the contract requires).
+
+enrich:
+  model: claude-haiku-4-5
+  prompt: prompts/enricher_v1.md
+  prompt_version: enrich_v1
+  schema_version: schema_v1
+  thinking: none            # Haiku 4.5: thinking is off unless enabled; cheapest setting
+  temperature: 0
+  batch_size: 50            # contract maximum; smaller is allowed
+  output_tokens_per_review: 110   # max_tokens = this x batch + 200 (cap, not a target)
+  max_output_tokens: 6000
+
+verify:
+  model: claude-haiku-4-5
+  prompt: prompts/verifier_v1.md
+  prompt_version: verify_v1
+  sample_fraction: 0.02     # declared random sample of completed originals
+  seed: 20261013
+  min_n: 10                 # small runs still verify at least this many
+
+group:
+  model: claude-haiku-4-5
+  prompt_version: group_v1
+
+memo:
+  model: claude-sonnet-5-5   # one call per run; bounded evidence pack
+  prompt_version: memo_v1
+  effort: low
+  max_tokens: 8000
+
+fallback:
+  model: claude-sonnet-5-5
+  max_fraction: 0.01        # at most 1% of distinct texts may use the stronger model
+
+controls:
+  spend_cap_usd: 150.00     # hard stop: spent + reserved + next reservation > cap
+  workers: 1                # start at 1; raise only after measuring
+  max_api_attempts: 4       # per request, for 429/5xx/connection errors (backoff + jitter)
+  backoff_base_seconds: 2.0
+  backoff_max_seconds: 60.0
+  request_timeout_seconds: 120

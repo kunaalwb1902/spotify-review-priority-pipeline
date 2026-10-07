@@ -13,3 +13,8 @@ state/
 __pycache__/
 *.pyc
 .DS_Store
+
+# SQLite state (rebuildable; large)
+*.db
+*.db-wal
+*.db-shm

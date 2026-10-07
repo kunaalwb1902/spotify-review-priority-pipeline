@@ -1,0 +1,13 @@
+provider,model,tier,billing_item,usage_field,price_usd_per_million_tokens,currency,source_url,checked_date,notes
+anthropic,claude-haiku-4-5,standard,input,input_tokens,1.00,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,uncached input only (API reports cache tokens separately)
+anthropic,claude-haiku-4-5,standard,cache_write_5m,cache_creation_input_tokens,1.25,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,1.25x base input
+anthropic,claude-haiku-4-5,standard,cache_read,cache_read_input_tokens,0.10,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,0.1x base input
+anthropic,claude-haiku-4-5,standard,output,output_tokens,5.00,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,no thinking used so no separate reasoning tokens
+anthropic,claude-haiku-4-5,batch,input,input_tokens,0.50,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,Batch API 50% discount
+anthropic,claude-haiku-4-5,batch,cache_write_5m,cache_creation_input_tokens,0.625,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,cache multiplier stacks with batch discount
+anthropic,claude-haiku-4-5,batch,cache_read,cache_read_input_tokens,0.05,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,cache multiplier stacks with batch discount
+anthropic,claude-haiku-4-5,batch,output,output_tokens,2.50,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,Batch API 50% discount
+anthropic,claude-sonnet-5-5,standard,input,input_tokens,2.00,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,capped fallback / memo only
+anthropic,claude-sonnet-5-5,standard,cache_write_5m,cache_creation_input_tokens,2.50,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,
+anthropic,claude-sonnet-5-5,standard,cache_read,cache_read_input_tokens,0.20,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,
+anthropic,claude-sonnet-5-5,standard,output,output_tokens,10.00,USD,https://platform.claude.com/docs/en/about-claude/pricing,2026-10-04,
