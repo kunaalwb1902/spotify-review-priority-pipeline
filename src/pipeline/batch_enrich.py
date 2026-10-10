@@ -68,8 +68,9 @@ class BatchEnricher(Enricher):
         return shas
 
     # ---------------------------------------------------------------- submit
-    def submit(self, texts, purpose, chunk_requests, progress):
-        size = self.s["batch_size"]
+    def submit(self, texts, purpose, chunk_requests, progress, group_size=None, per_review_tokens=None):
+        size = group_size or self.s["batch_size"]
+        per_review = per_review_tokens or self.s["output_tokens_per_review"]
         groups = [texts[k:k + size] for k in range(0, len(texts), size)]
         submitted = []
         for c in range(0, len(groups), chunk_requests):
@@ -78,7 +79,7 @@ class BatchEnricher(Enricher):
             for g in chunk:
                 local = [{"i": n, "review_id": t["review_id"], "text": t["text"], "text_sha256": t["text_sha256"]}
                          for n, t in enumerate(g, 1)]
-                max_tokens = min(self.s["max_output_tokens"], self.s["output_tokens_per_review"] * len(local) + 200)
+                max_tokens = min(self.s["max_output_tokens"], per_review * len(local) + 200)
                 cid = f"e{uuid.uuid4().hex[:20]}"
                 reqs.append({"custom_id": cid, "params": self._params(local, max_tokens)})
                 rows.append((cid, None, self.session_id, self.phase, purpose,
@@ -206,7 +207,7 @@ class BatchEnricher(Enricher):
         return totals, open_ids
 
     # ---------------------------------------------------------------- driver
-    def run_batch(self, limit=None, chunk_requests=500, max_chunks=None, poll_seconds=60, max_rounds=4,
+    def run_batch(self, limit=None, chunk_requests=500, max_chunks=None, poll_seconds=60, max_rounds=8,
                   progress=print, sleep=time.sleep):
         prior = self.con.execute("SELECT COUNT(*) FROM sessions WHERE role='enrich' AND label_config=?",
                                  (self.label_config,)).fetchone()[0]
@@ -251,8 +252,10 @@ class BatchEnricher(Enricher):
                 retry = [t for t in todo if fails.get(t["text_sha256"], 0) == 1]
                 progress(f"[{self.phase}] round {rnd + 1}: {len(first):,} first-attempt + {len(retry):,} retry texts "
                          f"({self.label_config})")
-                ids = []
-                for texts, purpose in ((first, "first"), (retry, "retry_invalid")):
+                ids, deferred = [], False
+                # retries go in small groups with more output room (max_tokens is not part of label_config)
+                for texts, purpose, kw in ((first, "first", {}),
+                                           (retry, "retry_invalid", {"group_size": 10, "per_review_tokens": 200})):
                     if not texts:
                         continue
                     budget_chunks = None if max_chunks is None else max(0, max_chunks - chunks_used)
@@ -260,11 +263,15 @@ class BatchEnricher(Enricher):
                         break
                     if budget_chunks is not None:
                         texts = texts[:budget_chunks * chunk_requests * self.s["batch_size"]]
-                    sub, err = self.submit(texts, purpose, chunk_requests, progress)
+                    sub, err = self.submit(texts, purpose, chunk_requests, progress, **kw)
                     chunks_used += len(sub)
                     ids += sub
                     if err:
-                        stop_reason = err
+                        if err.startswith("spend_cap") and ids:
+                            deferred = True        # blocked by RESERVATIONS: collect, release, continue next round
+                            progress("  reservations at cap: collecting in-flight batches before submitting more")
+                        else:
+                            stop_reason = err      # nothing in flight and still over cap -> real stop
                         break
                 t, left = self.wait_and_collect(ids, poll_seconds, sleep, progress)
                 totals = {k: totals[k] + t[k] for k in totals}

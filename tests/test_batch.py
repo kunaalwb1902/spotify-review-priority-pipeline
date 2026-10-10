@@ -130,3 +130,21 @@ def test_spend_cap_blocks_submission(run):
     s = be(run, fb, controls__spend_cap_usd=0.01).run_batch(**Q)
     assert s["stop_reason"].startswith("spend_cap") and fb.created == []
     assert len(pending_texts(run.con, ENR["label_config"])) == 120
+
+
+def test_reservation_cap_defers_instead_of_stopping(run):
+    """Cap admits one chunk's worst case at a time: run must keep going round after round, not stop."""
+    fb = FakeBatches(FakeClient())
+    e = be(run, fb, controls__spend_cap_usd=0.08)
+    s = e.run_batch(chunk_requests=1, **Q)
+    assert s["texts_completed"] == 120, s
+    assert len(fb.created) == 3 and not s["stop_reason"].startswith("spend_cap")
+
+
+def test_retry_uses_small_groups_with_more_output_room(run):
+    fb = FakeBatches(FakeClient(), result_script=["max_tokens"])
+    be(run, fb).run_batch(**Q)
+    retry = [r for r in run.con.execute("SELECT items, max_tokens FROM batch_requests WHERE purpose='retry_invalid'")]
+    assert retry and all(len(json.loads(i)) <= 10 for i, _ in retry)
+    assert all(m == min(RUN_CFG["enrich"]["max_output_tokens"], 200 * len(json.loads(i)) + 200) for i, m in retry)
+    assert pending_texts(run.con, ENR["label_config"]) == []
