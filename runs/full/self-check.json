@@ -1,0 +1,355 @@
+{
+  "audit_script_sha256": "d60bd66d84922d934c65b3d42b2c7d36cc738e8c75e2d6f2b2f58bca3141c26d",
+  "audit_version": "a5-audit-v1",
+  "automatic_grade": null,
+  "calculated_ranking": [
+    {
+      "complaint_count": 83059,
+      "issue_id": "ISS-other-general_criticism",
+      "mean_severity": "1.999001",
+      "priority_score": 166035,
+      "rank": 1,
+      "severity_sum": 166035
+    },
+    {
+      "complaint_count": 47824,
+      "issue_id": "ISS-billing-premium_only_features",
+      "mean_severity": "2.761124",
+      "priority_score": 132048,
+      "rank": 2,
+      "severity_sum": 132048
+    },
+    {
+      "complaint_count": 39263,
+      "issue_id": "ISS-usability-ads",
+      "mean_severity": "2.112421",
+      "priority_score": 82940,
+      "rank": 3,
+      "severity_sum": 82940
+    },
+    {
+      "complaint_count": 14364,
+      "issue_id": "ISS-playback-crash_or_wont_open",
+      "mean_severity": "3.446951",
+      "priority_score": 49512,
+      "rank": 4,
+      "severity_sum": 49512
+    },
+    {
+      "complaint_count": 15774,
+      "issue_id": "ISS-usability-shuffle_and_song_choice",
+      "mean_severity": "2.667110",
+      "priority_score": 42071,
+      "rank": 5,
+      "severity_sum": 42071
+    },
+    {
+      "complaint_count": 11621,
+      "issue_id": "ISS-playback-stops_or_pauses",
+      "mean_severity": "3.300749",
+      "priority_score": 38358,
+      "rank": 6,
+      "severity_sum": 38358
+    },
+    {
+      "complaint_count": 6731,
+      "issue_id": "ISS-access-login_failure",
+      "mean_severity": "3.789333",
+      "priority_score": 25506,
+      "rank": 7,
+      "severity_sum": 25506
+    },
+    {
+      "complaint_count": 8016,
+      "issue_id": "ISS-usability-ui_redesign",
+      "mean_severity": "2.195609",
+      "priority_score": 17600,
+      "rank": 8,
+      "severity_sum": 17600
+    },
+    {
+      "complaint_count": 6566,
+      "issue_id": "ISS-catalog-recommendations_and_unwanted_songs",
+      "mean_severity": "2.446847",
+      "priority_score": 16066,
+      "rank": 9,
+      "severity_sum": 16066
+    },
+    {
+      "complaint_count": 6201,
+      "issue_id": "ISS-catalog-missing_content",
+      "mean_severity": "2.297371",
+      "priority_score": 14246,
+      "rank": 10,
+      "severity_sum": 14246
+    },
+    {
+      "complaint_count": 5158,
+      "issue_id": "ISS-usability-queue_and_playlist_management",
+      "mean_severity": "2.661303",
+      "priority_score": 13727,
+      "rank": 11,
+      "severity_sum": 13727
+    },
+    {
+      "complaint_count": 5172,
+      "issue_id": "ISS-usability-navigation_and_controls",
+      "mean_severity": "2.275715",
+      "priority_score": 11770,
+      "rank": 12,
+      "severity_sum": 11770
+    },
+    {
+      "complaint_count": 3583,
+      "issue_id": "ISS-playback-connectivity",
+      "mean_severity": "3.110801",
+      "priority_score": 11146,
+      "rank": 13,
+      "severity_sum": 11146
+    },
+    {
+      "complaint_count": 4578,
+      "issue_id": "ISS-catalog-lyrics_availability",
+      "mean_severity": "2.199432",
+      "priority_score": 10069,
+      "rank": 14,
+      "severity_sum": 10069
+    },
+    {
+      "complaint_count": 4625,
+      "issue_id": "ISS-billing-price",
+      "mean_severity": "2.015135",
+      "priority_score": 9320,
+      "rank": 15,
+      "severity_sum": 9320
+    },
+    {
+      "complaint_count": 3461,
+      "issue_id": "ISS-playback-lag_or_buffering",
+      "mean_severity": "2.582202",
+      "priority_score": 8937,
+      "rank": 16,
+      "severity_sum": 8937
+    },
+    {
+      "complaint_count": 2949,
+      "issue_id": "ISS-playback-device_integration",
+      "mean_severity": "2.816887",
+      "priority_score": 8307,
+      "rank": 17,
+      "severity_sum": 8307
+    },
+    {
+      "complaint_count": 2535,
+      "issue_id": "ISS-downloads-offline_mode",
+      "mean_severity": "2.946351",
+      "priority_score": 7469,
+      "rank": 18,
+      "severity_sum": 7469
+    },
+    {
+      "complaint_count": 2161,
+      "issue_id": "ISS-billing-subscription_activation",
+      "mean_severity": "3.248033",
+      "priority_score": 7019,
+      "rank": 19,
+      "severity_sum": 7019
+    },
+    {
+      "complaint_count": 1903,
+      "issue_id": "ISS-playback-background_or_lockscreen",
+      "mean_severity": "2.824488",
+      "priority_score": 5375,
+      "rank": 20,
+      "severity_sum": 5375
+    },
+    {
+      "complaint_count": 1273,
+      "issue_id": "ISS-billing-unexpected_charges",
+      "mean_severity": "3.981932",
+      "priority_score": 5069,
+      "rank": 21,
+      "severity_sum": 5069
+    },
+    {
+      "complaint_count": 1410,
+      "issue_id": "ISS-downloads-downloads_disappear",
+      "mean_severity": "3.341844",
+      "priority_score": 4712,
+      "rank": 22,
+      "severity_sum": 4712
+    },
+    {
+      "complaint_count": 1250,
+      "issue_id": "ISS-access-logged_out_or_session",
+      "mean_severity": "3.461600",
+      "priority_score": 4327,
+      "rank": 23,
+      "severity_sum": 4327
+    },
+    {
+      "complaint_count": 1430,
+      "issue_id": "ISS-downloads-download_fails",
+      "mean_severity": "2.768531",
+      "priority_score": 3959,
+      "rank": 24,
+      "severity_sum": 3959
+    },
+    {
+      "complaint_count": 1504,
+      "issue_id": "ISS-playback-audio_quality",
+      "mean_severity": "2.276596",
+      "priority_score": 3424,
+      "rank": 25,
+      "severity_sum": 3424
+    },
+    {
+      "complaint_count": 1215,
+      "issue_id": "ISS-catalog-search",
+      "mean_severity": "2.428807",
+      "priority_score": 2951,
+      "rank": 26,
+      "severity_sum": 2951
+    },
+    {
+      "complaint_count": 795,
+      "issue_id": "ISS-catalog-podcasts_and_audiobooks",
+      "mean_severity": "2.506918",
+      "priority_score": 1993,
+      "rank": 27,
+      "severity_sum": 1993
+    },
+    {
+      "complaint_count": 405,
+      "issue_id": "ISS-access-account_hacked",
+      "mean_severity": "4.696296",
+      "priority_score": 1902,
+      "rank": 28,
+      "severity_sum": 1902
+    },
+    {
+      "complaint_count": 762,
+      "issue_id": "ISS-playback-battery_or_resource",
+      "mean_severity": "2.372703",
+      "priority_score": 1808,
+      "rank": 29,
+      "severity_sum": 1808
+    },
+    {
+      "complaint_count": 1147,
+      "issue_id": "ISS-other-unrelated_or_unclear",
+      "mean_severity": "1.396687",
+      "priority_score": 1602,
+      "rank": 30,
+      "severity_sum": 1602
+    },
+    {
+      "complaint_count": 552,
+      "issue_id": "ISS-access-signup",
+      "mean_severity": "2.875000",
+      "priority_score": 1587,
+      "rank": 31,
+      "severity_sum": 1587
+    },
+    {
+      "complaint_count": 398,
+      "issue_id": "ISS-access-account_recovery",
+      "mean_severity": "3.195980",
+      "priority_score": 1272,
+      "rank": 32,
+      "severity_sum": 1272
+    },
+    {
+      "complaint_count": 368,
+      "issue_id": "ISS-support-unhelpful_response",
+      "mean_severity": "2.866848",
+      "priority_score": 1055,
+      "rank": 33,
+      "severity_sum": 1055
+    },
+    {
+      "complaint_count": 314,
+      "issue_id": "ISS-support-no_response",
+      "mean_severity": "3.009554",
+      "priority_score": 945,
+      "rank": 34,
+      "severity_sum": 945
+    },
+    {
+      "complaint_count": 292,
+      "issue_id": "ISS-downloads-storage",
+      "mean_severity": "2.664384",
+      "priority_score": 778,
+      "rank": 35,
+      "severity_sum": 778
+    },
+    {
+      "complaint_count": 69,
+      "issue_id": "ISS-billing-refunds",
+      "mean_severity": "3.811594",
+      "priority_score": 263,
+      "rank": 36,
+      "severity_sum": 263
+    },
+    {
+      "complaint_count": 27,
+      "issue_id": "ISS-other-general_praise",
+      "mean_severity": "1.333333",
+      "priority_score": 36,
+      "rank": 37,
+      "severity_sum": 36
+    }
+  ],
+  "coverage": {
+    "accounted_fraction": 1.0,
+    "duplicate_ids": 0,
+    "expected": 660622,
+    "invalid_or_unresolved": 0,
+    "labelable": 660609,
+    "labelable_completion_fraction": 0.998383,
+    "missing": 0,
+    "quarantined": 1081,
+    "received_lines": 660622,
+    "unique_expected_ids": 660622,
+    "valid_cache_reuses": 176415,
+    "valid_completed": 659541,
+    "valid_completion_fraction": 0.998364
+  },
+  "examples": [
+    {
+      "code": "unfinished_classification",
+      "detail": "1068"
+    }
+  ],
+  "hash_convention": "Reference/benchmark: canonical UTF-8 JSON via canonical(); input files and audit script: exact bytes.",
+  "input_files_sha256": {
+    "calls.jsonl": "f61fe7420226559d07c2a5b5859b92ec72d2e38e7f3305bbd6c4ddeed5f439b4",
+    "checkpoint_after.json": "9579f2f7aee3376e5fb5f58b40ece6382d71fca21f81d678acdfd63fe1a0e871",
+    "checkpoint_before.json": "9d8ca6841e5dbea010a083f4fb82340c6481ca9af58b30f994eb883b5a3f77b1",
+    "claims.csv": "9f15e9e24acd5fc35df888b8e1b2cfdc2bf2a2613fc40f23d4e5486282507b6b",
+    "ingestion.json": "5512dd793b0bde3bd51f28b20b440108f3c9bab31233819bea5f32ce19482153",
+    "membership.csv": "060023061ff1533ff083d8b7e31206753d9a03b1b69f19e31c5df0286528d3b5",
+    "ranking.csv": "d481f928e6b93d72c645923b984c1b260a19bdd31030b66af0a3c727a774e064",
+    "records.jsonl.gz": "ef6a90ae4eeeb9fc5e078de8201532fc0c055e42d54444168f65920078533994",
+    "run.json": "09bf8e059a1517c9fd5d01d2ab9f43731b5c8f0f9d51da89daa40288a574645e"
+  },
+  "issue_counts": {
+    "unfinished_classification": 1
+  },
+  "limits": [
+    "Artifacts do not prove actual model execution, authorship, cost, or independent verification.",
+    "Exact quote membership does not prove that the quote supports the label.",
+    "Claims export checks numbers; a person must check that all memo claims are represented.",
+    "Benchmark agreement is diagnostic; final 4/3/3 grades require rubric review."
+  ],
+  "quality": {
+    "official": false,
+    "status": "not_supplied"
+  },
+  "reference_sha256": "bb31d47db9b9a85cd97b3ba6e880915aff41a6127c3accee719c139ab34b7e97",
+  "reported_calls": 10520,
+  "reported_input_tokens": 77945773,
+  "reported_output_tokens": 35035557,
+  "status": "review_required",
+  "working_coverage_point_candidate": 0.999
+}

@@ -1,0 +1,433 @@
+{
+  "question": "Where should next quarter's product effort go: access, usability, playback, or billing/support?",
+  "ranking_rule": "priority_score = severity_sum = complaint_count x mean_severity over complaint+cancellation records; ties by issue_id",
+  "run": {
+    "records": 660622,
+    "completed": 659541,
+    "completed_via_cache": 176415,
+    "quarantined_empty": 13,
+    "quarantined_model": 1068,
+    "unprocessed": 0,
+    "complaint_or_cancellation": 288755,
+    "needs_review": 86714
+  },
+  "product_areas": [
+    {
+      "product_area": "usability",
+      "issues": "5",
+      "complaint_count": "73383",
+      "severity_sum": "168108",
+      "mean_severity": "2.290830",
+      "share_of_complaints": "0.254136",
+      "cancellation_count": "4502",
+      "severity_4_plus": "449",
+      "severity_5": "0",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "other",
+      "issues": "3",
+      "complaint_count": "84233",
+      "severity_sum": "167673",
+      "mean_severity": "1.990586",
+      "share_of_complaints": "0.291711",
+      "cancellation_count": "4550",
+      "severity_4_plus": "9",
+      "severity_5": "3",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "billing_support",
+      "issues": "7",
+      "complaint_count": "56634",
+      "severity_sum": "155719",
+      "mean_severity": "2.749567",
+      "share_of_complaints": "0.196132",
+      "cancellation_count": "9438",
+      "severity_4_plus": "2683",
+      "severity_5": "833",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "playback",
+      "issues": "8",
+      "complaint_count": "40147",
+      "severity_sum": "126867",
+      "mean_severity": "3.160062",
+      "share_of_complaints": "0.139035",
+      "cancellation_count": "2065",
+      "severity_4_plus": "13696",
+      "severity_5": "10",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "catalog",
+      "issues": "5",
+      "complaint_count": "19355",
+      "severity_sum": "45325",
+      "mean_severity": "2.341772",
+      "share_of_complaints": "0.067029",
+      "cancellation_count": "732",
+      "severity_4_plus": "294",
+      "severity_5": "1",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "access",
+      "issues": "5",
+      "complaint_count": "9336",
+      "severity_sum": "34594",
+      "mean_severity": "3.705441",
+      "share_of_complaints": "0.032332",
+      "cancellation_count": "325",
+      "severity_4_plus": "6715",
+      "severity_5": "364",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    },
+    {
+      "product_area": "downloads",
+      "issues": "4",
+      "complaint_count": "5667",
+      "severity_sum": "16918",
+      "mean_severity": "2.985354",
+      "share_of_complaints": "0.019626",
+      "cancellation_count": "176",
+      "severity_4_plus": "1127",
+      "severity_5": "16",
+      "completed_records_denominator": "659541",
+      "complaints_denominator": "288755"
+    }
+  ],
+  "top_issues": [
+    {
+      "issue_id": "ISS-other-general_criticism",
+      "rank": 1,
+      "name": "General app quality and performance poor",
+      "description": "Customers express dissatisfaction with overall app functionality and quality.",
+      "product_area": "other",
+      "complaint_count": "83059",
+      "severity_sum": "166035",
+      "mean_severity": "1.999001",
+      "priority_score": "166035",
+      "cancellation_count": "3825",
+      "severity_4_plus": "8",
+      "examples": [
+        {
+          "review_id": "51886740-111a-4006-a56a-3a9dab9954e2",
+          "quote": "Very wrost app i uninstalled this app very very bad application"
+        },
+        {
+          "review_id": "37ec3c7f-1f0e-41f1-b0ff-dfe34ad681d5",
+          "quote": "I hate 👎 this Application, Because I love Quran."
+        },
+        {
+          "review_id": "3f462947-3f4b-4d38-ada4-7dab21c0055e",
+          "quote": "It's really bad app not working properly nonsense"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-billing-premium_only_features",
+      "rank": 2,
+      "name": "Premium paywall on basic features",
+      "description": "Customers report essential features like shuffle control and song seeking locked behind premium subscription.",
+      "product_area": "billing_support",
+      "complaint_count": "47824",
+      "severity_sum": "132048",
+      "mean_severity": "2.761124",
+      "priority_score": "132048",
+      "cancellation_count": "8764",
+      "severity_4_plus": "1012",
+      "examples": [
+        {
+          "review_id": "e7747485-42c5-4bb9-b1e2-1b4044eedb5a",
+          "quote": "wouldnt even let us shuffle, play previous track, repeat a single song back to back, etc. For non premium users."
+        },
+        {
+          "review_id": "c917e047-2d4b-41c5-ad41-bc9355b6d6e4",
+          "quote": "it requires only premium users and force users to pay user subscription"
+        },
+        {
+          "review_id": "9b42b7f8-2477-4516-b2de-6d46831fbad9",
+          "quote": "u hav to cut down d basic feature of playing songs in order and limiting it to premium users"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-usability-ads",
+      "rank": 3,
+      "name": "Excessive ads in free version",
+      "description": "Customers report too many ads playing frequently, interrupting music listening.",
+      "product_area": "usability",
+      "complaint_count": "39263",
+      "severity_sum": "82940",
+      "mean_severity": "2.112421",
+      "priority_score": "82940",
+      "cancellation_count": "1543",
+      "severity_4_plus": "33",
+      "examples": [
+        {
+          "review_id": "416a5ab7-fe92-487a-aabd-bfb1080edd4d",
+          "quote": "Lots of add"
+        },
+        {
+          "review_id": "45e2aab4-449c-4c23-83d0-69bd568a9e08",
+          "quote": "every 12 or so ads these weird songs start playing. It's pretty rare but it's still annoying."
+        },
+        {
+          "review_id": "92bd7ff4-4322-4406-9033-f13e3079aa74",
+          "quote": "there are too many ads"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-playback-crash_or_wont_open",
+      "rank": 4,
+      "name": "App crashes or fails to open",
+      "description": "Customers report frequent crashes, slow loading, and compatibility issues after updates.",
+      "product_area": "playback",
+      "complaint_count": "14364",
+      "severity_sum": "49512",
+      "mean_severity": "3.446951",
+      "priority_score": "49512",
+      "cancellation_count": "727",
+      "severity_4_plus": "8350",
+      "examples": [
+        {
+          "review_id": "c2c38440-5dce-479b-aac4-e336b0d8cb79",
+          "quote": "2023 suddenly off, why?? I try to clear my chace and then restart my phone, but still same. Not Happy!!"
+        },
+        {
+          "review_id": "49a4b8af-602d-4e15-ab05-f9ec39551e22",
+          "quote": "Bugsss all the timee"
+        },
+        {
+          "review_id": "d800791c-bf52-40e0-8ee9-5397a32120a7",
+          "quote": "I pay $10 per month for a working app that i can listen to music too. Not an app that crashes and takes forever to load up."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-usability-shuffle_and_song_choice",
+      "rank": 5,
+      "name": "Forced shuffle and limited song selection",
+      "description": "Customers cannot disable shuffle or choose specific songs without autoplay interference.",
+      "product_area": "usability",
+      "complaint_count": "15774",
+      "severity_sum": "42071",
+      "mean_severity": "2.667110",
+      "priority_score": "42071",
+      "cancellation_count": "1373",
+      "severity_4_plus": "161",
+      "examples": [
+        {
+          "review_id": "54dca140-19f7-4c8c-a176-19fcdeef283d",
+          "quote": "both my fiance and I are having problems of the same 4 songs playing on repeat frequently"
+        },
+        {
+          "review_id": "ae776e66-d026-4313-a3d9-c7f5c34c4f6f",
+          "quote": "No option for turn off shuffle..... You just search for a music then click on it & another music start playing."
+        },
+        {
+          "review_id": "6f8060ce-d45e-4e30-be3f-477a88a5cb36",
+          "quote": "auto play other song that I don't like and don't want to listen"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-playback-stops_or_pauses",
+      "rank": 6,
+      "name": "Playback stops unexpectedly",
+      "description": "Customers report songs stopping mid-play or restarting without user action.",
+      "product_area": "playback",
+      "complaint_count": "11621",
+      "severity_sum": "38358",
+      "mean_severity": "3.300749",
+      "priority_score": "38358",
+      "cancellation_count": "625",
+      "severity_4_plus": "4042",
+      "examples": [
+        {
+          "review_id": "4a310e02-2b6b-495c-aa37-56c78ccaf452",
+          "quote": "whenever i play a song it suddenly stops. It happens very often lately"
+        },
+        {
+          "review_id": "4cd1bd5d-9e8a-47e3-a8de-4a748e5546c4",
+          "quote": "Bru je dngr dlm 4 5 lagu tiber je terpadam dgn sndri nya . Brpa kali dh uninstalled pastu installed balik sama sajaa"
+        },
+        {
+          "review_id": "4cd11f7e-f709-4b5a-b348-9546182d3b2c",
+          "quote": "Liked songs not playing??"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-access-login_failure",
+      "rank": 7,
+      "name": "Login authentication failures",
+      "description": "Customers cannot log in with correct credentials, phone numbers, or social media accounts.",
+      "product_area": "access",
+      "complaint_count": "6731",
+      "severity_sum": "25506",
+      "mean_severity": "3.789333",
+      "priority_score": "25506",
+      "cancellation_count": "189",
+      "severity_4_plus": "5413",
+      "examples": [
+        {
+          "review_id": "97be5642-eab6-45f4-9c08-3aa28cc8e8ac",
+          "quote": "Not able to login my mobile number"
+        },
+        {
+          "review_id": "b1b9f535-7d87-4137-b0d0-d7e854f46e25",
+          "quote": "why can you accept my phone number when it's literally registered"
+        },
+        {
+          "review_id": "663a93eb-c77a-4b86-a883-c98889ac5f11",
+          "quote": "It's not god l can't login my account"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-usability-ui_redesign",
+      "rank": 8,
+      "name": "Recent UI redesign creates poor experience",
+      "description": "Customers dislike new home screen layout and missing customization options.",
+      "product_area": "usability",
+      "complaint_count": "8016",
+      "severity_sum": "17600",
+      "mean_severity": "2.195609",
+      "priority_score": "17600",
+      "cancellation_count": "1035",
+      "severity_4_plus": "33",
+      "examples": [
+        {
+          "review_id": "f4ba7c67-5447-4a14-a1cd-992903c33806",
+          "quote": "why are all the commas missing in play counts on the artist page??"
+        },
+        {
+          "review_id": "39c5c639-d6be-4289-af2c-dd0595ca5769",
+          "quote": "why did they take away the \"what's new\" section?"
+        },
+        {
+          "review_id": "55ee0325-9112-4300-8d26-ce3c01882696",
+          "quote": "roll back the latest updates to the home page it actively makes me angry to scroll through and get snippets of songs or podcasts I don't want to listen to blasted in my ears"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-catalog-recommendations_and_unwanted_songs",
+      "rank": 9,
+      "name": "Unwanted songs added to playlists",
+      "description": "Customers report app automatically adding suggested songs to playlists they cannot remove.",
+      "product_area": "catalog",
+      "complaint_count": "6566",
+      "severity_sum": "16066",
+      "mean_severity": "2.446847",
+      "priority_score": "16066",
+      "cancellation_count": "311",
+      "severity_4_plus": "39",
+      "examples": [
+        {
+          "review_id": "b06b52af-4bba-4c93-ae15-410077f19c01",
+          "quote": "STOP PUTTING SUGGESTED SONGS IN MY PLAYLISTS"
+        },
+        {
+          "review_id": "ef37fa5a-ed45-43e6-b248-050a2bab3831",
+          "quote": "it comes up with a different song"
+        },
+        {
+          "review_id": "08744bb6-4420-4006-9b0c-df46de36565b",
+          "quote": "The app keeps adding songs to my Playlist that I don't want and won't let me remove them."
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-catalog-missing_content",
+      "rank": 10,
+      "name": "Limited music catalog and missing songs",
+      "description": "Customers report favorite songs unavailable and limited music selection on the platform.",
+      "product_area": "catalog",
+      "complaint_count": "6201",
+      "severity_sum": "14246",
+      "mean_severity": "2.297371",
+      "priority_score": "14246",
+      "cancellation_count": "286",
+      "severity_4_plus": "186",
+      "examples": [
+        {
+          "review_id": "bb701f30-d334-4728-9ec9-82e9bdc6e09c",
+          "quote": "Dlaczego usuwacie ficzery jak playlist radio?"
+        },
+        {
+          "review_id": "5185fc7e-8e72-45e4-8d85-91ab76c43fae",
+          "quote": "i cannot view my liked songs .. the display goes blank"
+        },
+        {
+          "review_id": "d9520370-1ab8-4bde-b991-8408f46ebae4",
+          "quote": "Limited songs"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-usability-queue_and_playlist_management",
+      "rank": 11,
+      "name": "Playlist management and sharing broken",
+      "description": "Customers cannot reorder songs, share playlists, or manage queue properly.",
+      "product_area": "usability",
+      "complaint_count": "5158",
+      "severity_sum": "13727",
+      "mean_severity": "2.661303",
+      "priority_score": "13727",
+      "cancellation_count": "250",
+      "severity_4_plus": "194",
+      "examples": [
+        {
+          "review_id": "90f324a3-f9b3-4e22-ad27-7240e5ac630e",
+          "quote": "We can't listen the songs orderly in playlist that creates by us"
+        },
+        {
+          "review_id": "9d50176e-6e7f-4540-a9c6-5b0917523007",
+          "quote": "The shareable playlist option seems to almost never work. I'm not able to open the link sent by a friend."
+        },
+        {
+          "review_id": "991cde07-152f-4556-a9c5-cb5c696a69d0",
+          "quote": "why the hell Is queue option"
+        }
+      ]
+    },
+    {
+      "issue_id": "ISS-usability-navigation_and_controls",
+      "rank": 12,
+      "name": "Missing features and poor navigation",
+      "description": "Customers report removed features like history, missing lyrics display, and confusing interface.",
+      "product_area": "usability",
+      "complaint_count": "5172",
+      "severity_sum": "11770",
+      "mean_severity": "2.275715",
+      "priority_score": "11770",
+      "cancellation_count": "301",
+      "severity_4_plus": "28",
+      "examples": [
+        {
+          "review_id": "9859c39f-4c91-411a-a91e-a8ea92d48626",
+          "quote": "Why am i being shoved podcasts second thing on my homepage when I don't listen to podcasts?"
+        },
+        {
+          "review_id": "f7475296-921e-47d0-bcf7-5dde87121276",
+          "quote": "Spotify used to have but has inexplicably removed."
+        },
+        {
+          "review_id": "7d6af566-62cf-490a-b39f-e005ceccfb40",
+          "quote": "No 5⭐️s until ya'll bring back the \"History\" feature! WHY?! I liked being able to see my listening history! After this last update, it's gone."
+        }
+      ]
+    }
+  ]
+}

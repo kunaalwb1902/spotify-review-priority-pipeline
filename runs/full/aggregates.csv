@@ -1,0 +1,38 @@
+rank,issue_id,name,product_area,complaint_count,severity_sum,mean_severity,priority_score,cancellation_count,severity_4_plus,severity_5,needs_review_count
+1,ISS-other-general_criticism,General app quality and performance poor,other,83059,166035,1.999001,166035,3825,8,2,12291
+2,ISS-billing-premium_only_features,Premium paywall on basic features,billing_support,47824,132048,2.761124,132048,8764,1012,0,3520
+3,ISS-usability-ads,Excessive ads in free version,usability,39263,82940,2.112421,82940,1543,33,0,2752
+4,ISS-playback-crash_or_wont_open,App crashes or fails to open,playback,14364,49512,3.446951,49512,727,8350,7,2157
+5,ISS-usability-shuffle_and_song_choice,Forced shuffle and limited song selection,usability,15774,42071,2.667110,42071,1373,161,0,858
+6,ISS-playback-stops_or_pauses,Playback stops unexpectedly,playback,11621,38358,3.300749,38358,625,4042,0,933
+7,ISS-access-login_failure,Login authentication failures,access,6731,25506,3.789333,25506,189,5413,23,508
+8,ISS-usability-ui_redesign,Recent UI redesign creates poor experience,usability,8016,17600,2.195609,17600,1035,33,0,250
+9,ISS-catalog-recommendations_and_unwanted_songs,Unwanted songs added to playlists,catalog,6566,16066,2.446847,16066,311,39,0,332
+10,ISS-catalog-missing_content,Limited music catalog and missing songs,catalog,6201,14246,2.297371,14246,286,186,0,1042
+11,ISS-usability-queue_and_playlist_management,Playlist management and sharing broken,usability,5158,13727,2.661303,13727,250,194,0,289
+12,ISS-usability-navigation_and_controls,Missing features and poor navigation,usability,5172,11770,2.275715,11770,301,28,0,477
+13,ISS-playback-connectivity,Offline error despite active connection,playback,3583,11146,3.110801,11146,108,771,0,345
+14,ISS-catalog-lyrics_availability,Lyrics feature missing or unavailable,catalog,4578,10069,2.199432,10069,61,4,0,249
+15,ISS-billing-price,Premium subscription too expensive,billing_support,4625,9320,2.015135,9320,449,1,0,832
+16,ISS-playback-lag_or_buffering,App lag and buffering delays,playback,3461,8937,2.582202,8937,101,214,0,322
+17,ISS-playback-device_integration,Device connection and car mode issues,playback,2949,8307,2.816887,8307,225,179,2,155
+18,ISS-downloads-offline_mode,Offline mode requires daily redownload,downloads,2535,7469,2.946351,7469,77,435,2,173
+19,ISS-billing-subscription_activation,Premium subscription not activating,billing_support,2161,7019,3.248033,7019,96,702,161,375
+20,ISS-playback-background_or_lockscreen,Background playback stops or malfunctions,playback,1903,5375,2.824488,5375,180,88,0,60
+21,ISS-billing-unexpected_charges,Unexpected or duplicate charges,billing_support,1273,5069,3.981932,5069,82,840,640,372
+22,ISS-downloads-downloads_disappear,Downloaded songs disappear or unsave,downloads,1410,4712,3.341844,4712,59,523,10,66
+23,ISS-access-logged_out_or_session,Unexpected logout and session loss,access,1250,4327,3.461600,4327,44,635,5,68
+24,ISS-downloads-download_fails,Songs fail to download,downloads,1430,3959,2.768531,3959,19,144,4,238
+25,ISS-playback-audio_quality,Poor audio quality and low volume,playback,1504,3424,2.276596,3424,61,39,0,176
+26,ISS-catalog-search,Search functionality returns wrong results,catalog,1215,2951,2.428807,2951,28,31,0,150
+27,ISS-catalog-podcasts_and_audiobooks,Podcast features buggy and incomplete,catalog,795,1993,2.506918,1993,46,34,1,59
+28,ISS-access-account_hacked,Account hacked or compromised,access,405,1902,4.696296,1902,26,375,323,180
+29,ISS-playback-battery_or_resource,Excessive battery and data consumption,playback,762,1808,2.372703,1808,38,13,1,72
+30,ISS-other-unrelated_or_unclear,Unrelated complaints or unclear issues,other,1147,1602,1.396687,1602,707,1,1,933
+31,ISS-access-signup,Account signup and registration failures,access,552,1587,2.875000,1587,42,146,11,206
+32,ISS-access-account_recovery,Account recovery and password reset issues,access,398,1272,3.195980,1272,24,146,2,81
+33,ISS-support-unhelpful_response,Customer support provides no solutions,billing_support,368,1055,2.866848,1055,26,48,3,61
+34,ISS-support-no_response,Customer support unresponsive,billing_support,314,945,3.009554,945,15,39,1,43
+35,ISS-downloads-storage,Downloads consume excessive device storage,downloads,292,778,2.664384,778,21,25,0,34
+36,ISS-billing-refunds,Refund requests not processed,billing_support,69,263,3.811594,263,6,41,28,17
+37,ISS-other-general_praise,Positive user experience,other,27,36,1.333333,36,18,0,0,10

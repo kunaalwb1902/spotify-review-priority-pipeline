@@ -1,0 +1,4 @@
+[resume] claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88
+  pending texts=0 -> 0 batches of <= 50, workers=1, cap=$150.00
+  stop: completed | {"session_id": "enrich-20261010T095057-8810e3", "phase": "resume", "stop_reason": "completed", "texts_completed": 0, "texts_quarantined": 0, "wall_clock_seconds": 1.18, "spent_usd": 99.861626, "unreconciled_usd": 0.0}
+{'run_id': 'run-20261010T095057', 'partial': False, 'total_cost_usd': 102.208755, 'ranking_sha256': 'd481f928e6b93d72c645923b984c1b260a19bdd31030b66af0a3c727a774e064', 'stopped': None, 'pending': None}

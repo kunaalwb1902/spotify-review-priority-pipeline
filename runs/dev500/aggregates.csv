@@ -1,0 +1,28 @@
+rank,issue_id,name,product_area,complaint_count,severity_sum,mean_severity,priority_score,cancellation_count,severity_4_plus,severity_5,needs_review_count
+1,ISS-other-general_criticism,General app dissatisfaction and poor quality,other,57,114,2.000000,114,6,0,0,13
+2,ISS-billing-premium_only_features,Core features locked behind Premium paywall,billing_support,42,112,2.666667,112,4,2,0,1
+3,ISS-usability-ads,Excessive ads in free tier,usability,33,69,2.090909,69,2,0,0,3
+4,ISS-playback-stops_or_pauses,Playback stops or won't play songs,playback,13,44,3.384615,44,1,7,0,2
+5,ISS-playback-crash_or_wont_open,App crashes and won't open,playback,11,36,3.272727,36,3,5,0,1
+6,ISS-usability-shuffle_and_song_choice,Wrong songs play and limited skip controls,usability,13,33,2.538462,33,1,0,0,0
+7,ISS-access-login_failure,Login failures and authentication errors,access,6,23,3.833333,23,0,5,0,0
+8,ISS-playback-connectivity,False no internet connection errors,playback,8,23,2.875000,23,0,1,0,0
+9,ISS-usability-ui_redesign,New UI redesign less user-friendly,usability,9,19,2.111111,19,0,0,0,0
+10,ISS-catalog-missing_content,Missing songs and limited artist catalog,catalog,7,17,2.428571,17,0,0,0,1
+11,ISS-usability-navigation_and_controls,Missing features and confusing navigation,usability,7,16,2.285714,16,0,0,0,0
+12,ISS-catalog-recommendations_and_unwanted_songs,Unwanted songs and repetitive recommendations,catalog,6,13,2.166667,13,0,0,0,1
+13,ISS-catalog-lyrics_availability,Song lyrics fail to load,catalog,5,11,2.200000,11,0,0,0,0
+14,ISS-billing-subscription_activation,Premium subscription purchase fails,billing_support,3,10,3.333333,10,0,1,0,1
+15,ISS-access-logged_out_or_session,Unexpected logout and subscription access issues,access,2,8,4.000000,8,0,2,0,0
+16,ISS-playback-device_integration,Device casting and connection problems,playback,3,8,2.666667,8,0,0,0,1
+17,ISS-downloads-storage,Offline storage issues and data waste,downloads,2,6,3.000000,6,0,1,0,0
+18,ISS-access-account_hacked,"Account hacked, playlists inaccessible",access,1,5,5.000000,5,0,1,1,0
+19,ISS-downloads-offline_mode,Offline mode not working,downloads,2,5,2.500000,5,0,0,0,1
+20,ISS-billing-price,Subscription costs too high,billing_support,2,4,2.000000,4,0,0,0,2
+21,ISS-downloads-downloads_disappear,Downloaded songs disappear unexpectedly,downloads,1,4,4.000000,4,0,1,0,0
+22,ISS-other-unrelated_or_unclear,Unrelated complaints and protest uninstalls,other,2,3,1.500000,3,1,0,0,2
+23,ISS-playback-lag_or_buffering,Podcast playback lagging,playback,1,3,3.000000,3,0,0,0,0
+24,ISS-usability-queue_and_playlist_management,Cannot add songs to queue,usability,1,3,3.000000,3,0,0,0,0
+25,ISS-downloads-download_fails,Downloads stuck in progress,downloads,1,2,2.000000,2,0,0,0,0
+26,ISS-playback-audio_quality,Poor audio quality and noise,playback,1,2,2.000000,2,0,0,0,0
+27,ISS-support-unhelpful_response,Rude and unhelpful customer support,billing_support,1,2,2.000000,2,0,0,0,1

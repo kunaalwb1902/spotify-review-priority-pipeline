@@ -27,8 +27,18 @@ def issue_id(topic, subtopic):
     return f"ISS-{topic}-{subtopic}"
 
 
+def open_records(path):
+    """records.jsonl, or the gzipped copy in grading/ (what the release ships) when the plain file is absent."""
+    import gzip
+    path = Path(path)
+    for cand in (path, path.with_name(path.name + ".gz"), path.parent / "grading" / (path.name + ".gz")):
+        if cand.exists():
+            return gzip.open(cand, "rt", encoding="utf-8") if cand.suffix == ".gz" else open(cand, encoding="utf-8")
+    raise FileNotFoundError(f"{path} (or grading/{path.name}.gz) not found - download grading.zip from the release")
+
+
 def read_records(path):
-    with open(path, encoding="utf-8") as f:
+    with open_records(path) as f:
         for line in f:
             if line.strip():
                 yield json.loads(line)

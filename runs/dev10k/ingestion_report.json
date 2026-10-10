@@ -1,0 +1,112 @@
+{
+  "counts": {
+    "distinct_nonempty_texts": 8448,
+    "duplicate_review_ids": 0,
+    "empty_review_text_quarantined": 0,
+    "exact_duplicate_text_groups": 287,
+    "missing_app_version": 2447,
+    "nonempty_to_classify": 10000,
+    "records": 10000,
+    "rows_reusable_by_exact_text": 1552
+  },
+  "first_review": "2022-05-17 02:29:15",
+  "input_path": "data/raw/analysis_10000.csv",
+  "input_sha256": "eaa62ca6d44d717302904a9c922e99b0b4584d174309cb45295ecbc2ba2a91b5",
+  "last_review": "2023-11-15 22:13:05",
+  "manifest_check": {
+    "status": "not_the_full_file"
+  },
+  "most_repeated_texts": [
+    {
+      "count": 214,
+      "text": "Good"
+    },
+    {
+      "count": 79,
+      "text": "Nice"
+    },
+    {
+      "count": 60,
+      "text": "Great"
+    },
+    {
+      "count": 53,
+      "text": "Awesome"
+    },
+    {
+      "count": 48,
+      "text": "Love it"
+    },
+    {
+      "count": 48,
+      "text": "Excellent"
+    },
+    {
+      "count": 37,
+      "text": "Super"
+    },
+    {
+      "count": 34,
+      "text": "Worst app"
+    },
+    {
+      "count": 31,
+      "text": "Good app"
+    },
+    {
+      "count": 30,
+      "text": "Very good"
+    },
+    {
+      "count": 28,
+      "text": "Nice app"
+    },
+    {
+      "count": 24,
+      "text": "Best"
+    },
+    {
+      "count": 23,
+      "text": "Worst"
+    },
+    {
+      "count": 21,
+      "text": "Amazing"
+    },
+    {
+      "count": 21,
+      "text": "Very bad"
+    }
+  ],
+  "notes": "Missing app_version does not block classification. Raw values are stored unchanged.",
+  "quarantine_rule": "review_text.strip() == '' -> status quarantined, reason empty_review_text",
+  "reviews_by_month": {
+    "2022-05": 232,
+    "2022-06": 421,
+    "2022-07": 506,
+    "2022-08": 466,
+    "2022-09": 438,
+    "2022-10": 412,
+    "2022-11": 406,
+    "2022-12": 520,
+    "2023-01": 451,
+    "2023-02": 337,
+    "2023-03": 425,
+    "2023-04": 359,
+    "2023-05": 423,
+    "2023-06": 391,
+    "2023-07": 1246,
+    "2023-08": 459,
+    "2023-09": 625,
+    "2023-10": 1381,
+    "2023-11": 502
+  },
+  "reviews_by_rating": {
+    "1": 3685,
+    "2": 469,
+    "3": 498,
+    "4": 836,
+    "5": 4512
+  },
+  "seconds": 0.12
+}

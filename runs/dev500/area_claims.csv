@@ -1,0 +1,17 @@
+claim_id,subject,metric,value
+X01,ISS-billing-premium_only_features,cancellation_count,4
+X02,AREA:usability,severity_sum,140
+X03,AREA:billing_support,mean_severity,2.666667
+X04,AREA:usability,mean_severity,2.222222
+X05,AREA:billing_support,severity_4_plus,3
+X06,AREA:usability,severity_4_plus,0
+X07,AREA:billing_support,complaint_count,48
+X08,AREA:billing_support,share_of_complaints,0.200000
+X09,AREA:billing_support,severity_sum,128
+X10,AREA:usability,complaint_count,63
+X11,AREA:playback,complaint_count,37
+X12,AREA:playback,mean_severity,3.135135
+X13,AREA:playback,severity_4_plus,13
+X14,AREA:playback,severity_sum,116
+X15,AREA:access,complaint_count,9
+X16,AREA:access,mean_severity,4.000000

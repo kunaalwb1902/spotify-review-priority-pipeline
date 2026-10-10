@@ -1,0 +1,105 @@
+{
+  "counts": {
+    "distinct_nonempty_texts": 20,
+    "duplicate_review_ids": 0,
+    "empty_review_text_quarantined": 0,
+    "exact_duplicate_text_groups": 0,
+    "missing_app_version": 6,
+    "nonempty_to_classify": 20,
+    "records": 20,
+    "rows_reusable_by_exact_text": 0
+  },
+  "first_review": "2022-09-03 03:00:53",
+  "input_path": "data/smoke_20.csv",
+  "input_sha256": "2d456a98c11def8deb7b1386ddeacba4390722ebedfaf67310cae792234342d9",
+  "last_review": "2023-11-06 17:24:04",
+  "manifest_check": {
+    "status": "not_the_full_file"
+  },
+  "most_repeated_texts": [
+    {
+      "count": 1,
+      "text": "Shame on you 😡 😡😠😠😡"
+    },
+    {
+      "count": 1,
+      "text": "Hate this application 😡😡😡bakwas"
+    },
+    {
+      "count": 1,
+      "text": "Hateful app Waste of time"
+    },
+    {
+      "count": 1,
+      "text": "I love the mixes"
+    },
+    {
+      "count": 1,
+      "text": "The very second I signed up for premium it stopped letting me play anything.. lol . Fastest cancelation of a service I've done, ever. Bye bye Spotify. Hello old friend, Bittorrent"
+    },
+    {
+      "count": 1,
+      "text": "I love sportify. This is number one music app for me and others."
+    },
+    {
+      "count": 1,
+      "text": "Listen to my music almost everyday,this app is great. But the bad thing is that it gives too many ads, i would have hiven it 5 stars. Apart from that this app is great"
+    },
+    {
+      "count": 1,
+      "text": "It's good"
+    },
+    {
+      "count": 1,
+      "text": "I hate this application .. 👎"
+    },
+    {
+      "count": 1,
+      "text": "It is absolutely useless after the latest update. There's nothing I can do without the \"try premium\" option popping up every damn time."
+    },
+    {
+      "count": 1,
+      "text": "I paid my subscription and im still getting a pause subscription screen and can't access my music...... help me"
+    },
+    {
+      "count": 1,
+      "text": "Could be doing with hi-res audio don't like getting bombarded with playlist recommendations when the option is turned off"
+    },
+    {
+      "count": 1,
+      "text": "Awesom"
+    },
+    {
+      "count": 1,
+      "text": "Bad everything is about premium no basic features"
+    },
+    {
+      "count": 1,
+      "text": "Best experience"
+    }
+  ],
+  "notes": "Missing app_version does not block classification. Raw values are stored unchanged.",
+  "quarantine_rule": "review_text.strip() == '' -> status quarantined, reason empty_review_text",
+  "reviews_by_month": {
+    "2022-09": 1,
+    "2022-10": 2,
+    "2022-11": 1,
+    "2022-12": 1,
+    "2023-01": 1,
+    "2023-02": 1,
+    "2023-04": 1,
+    "2023-06": 3,
+    "2023-07": 4,
+    "2023-08": 1,
+    "2023-10": 3,
+    "2023-11": 1
+  },
+  "reviews_by_rating": {
+    "1": 7,
+    "2": 1,
+    "3": 1,
+    "4": 3,
+    "5": 8
+  },
+  "seconds": 0.01
+}

@@ -1,0 +1,8 @@
+product_area,issues,complaint_count,severity_sum,mean_severity,share_of_complaints,cancellation_count,severity_4_plus,severity_5,completed_records_denominator,complaints_denominator
+usability,4,13,30,2.307692,0.260000,2,0,0,100,50
+billing_support,2,9,26,2.888889,0.180000,0,0,0,100,50
+other,1,12,24,2.000000,0.240000,2,0,0,100,50
+playback,3,6,20,3.333333,0.120000,0,3,0,100,50
+catalog,3,6,13,2.166667,0.120000,0,0,0,100,50
+access,1,2,8,4.000000,0.040000,0,2,0,100,50
+downloads,2,2,5,2.500000,0.040000,0,0,0,100,50

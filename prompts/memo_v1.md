@@ -9,6 +9,7 @@ You receive ONLY a bounded evidence pack (JSON inside <evidence> tags): run acco
   - Run accounting: `{RUN.key}` using keys listed in the pack's `run` object. Example: `{RUN.completed}`.
 - Refer to issues by their issue_id in backticks, e.g. `ISS-usability-ads`. Use only issue IDs present in the pack.
 - Cite example reviews only by review IDs present in the pack, in square brackets, e.g. [review 1a2b3c4d-...]. Quote only the exact quote text given for that ID.
+- EVERY quotation in double quotes must be immediately followed by its [review ID]. Never quote text without its review ID.
 - Do not compute new numbers (no sums, differences, ratios, percentages of your own). If you want a comparison, state it qualitatively ("larger", "roughly double" is NOT allowed — say "larger").
 - Spelled-out ordinal words like "first" or "top" are fine; written severity levels may use words ("severity four") rather than digits.
 

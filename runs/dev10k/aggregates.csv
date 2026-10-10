@@ -1,0 +1,37 @@
+rank,issue_id,name,product_area,complaint_count,severity_sum,mean_severity,priority_score,cancellation_count,severity_4_plus,severity_5,needs_review_count
+1,ISS-other-general_criticism,General app malfunction and poor quality,other,1217,2431,1.997535,2431,56,0,0,191
+2,ISS-billing-premium_only_features,Basic features locked behind Premium paywall,billing_support,695,1943,2.795683,1943,117,15,0,47
+3,ISS-usability-ads,Excessive ads in free version,usability,632,1333,2.109177,1333,31,0,0,45
+4,ISS-playback-crash_or_wont_open,App crashes or fails to open,playback,249,849,3.409639,849,14,134,0,36
+5,ISS-playback-stops_or_pauses,Playback stops or skips to next song unexpectedly,playback,189,615,3.253968,615,13,58,0,17
+6,ISS-usability-shuffle_and_song_choice,Shuffle adds unwanted songs and blocks skipping,usability,215,566,2.632558,566,15,3,0,18
+7,ISS-access-login_failure,Login failures and connection errors,access,105,392,3.733333,392,1,79,0,15
+8,ISS-usability-ui_redesign,UI redesign cluttered and difficult to use,usability,131,291,2.221374,291,19,0,0,4
+9,ISS-usability-navigation_and_controls,Poor navigation and missing customization options,usability,112,261,2.330357,261,8,1,0,7
+10,ISS-catalog-recommendations_and_unwanted_songs,Unwanted songs added to playlists automatically,catalog,96,233,2.427083,233,2,0,0,9
+11,ISS-catalog-missing_content,Songs and albums removed or unavailable,catalog,85,194,2.282353,194,4,1,0,18
+12,ISS-playback-connectivity,Sudden disconnection and offline errors,playback,60,186,3.100000,186,1,12,0,7
+13,ISS-usability-queue_and_playlist_management,Confusing queue and playlist controls,usability,71,186,2.619718,186,5,2,0,6
+14,ISS-billing-price,Premium subscription pricing too expensive,billing_support,90,180,2.000000,180,6,0,0,21
+15,ISS-playback-lag_or_buffering,Constant lag and loading delays,playback,67,172,2.567164,172,3,3,0,7
+16,ISS-catalog-lyrics_availability,Lyrics missing or not loading,catalog,63,140,2.222222,140,2,0,0,2
+17,ISS-downloads-offline_mode,Offline mode not working or unavailable,downloads,37,110,2.972973,110,1,7,0,2
+18,ISS-billing-subscription_activation,Subscription activation and payment errors,billing_support,33,107,3.242424,107,0,9,1,6
+19,ISS-playback-device_integration,Device connectivity and cross-device sync issues,playback,36,101,2.805556,101,4,3,0,1
+20,ISS-playback-background_or_lockscreen,Unwanted background playback and autostart,playback,29,79,2.724138,79,2,0,0,2
+21,ISS-playback-audio_quality,Poor audio quality and volume control,playback,29,74,2.551724,74,3,4,0,6
+22,ISS-downloads-downloads_disappear,Downloaded songs repeatedly disappear,downloads,22,70,3.181818,70,0,6,0,0
+23,ISS-access-logged_out_or_session,Unexpected automatic logout issues,access,14,48,3.428571,48,1,6,0,0
+24,ISS-catalog-search,Search function fails to load results,catalog,18,44,2.444444,44,0,1,0,2
+25,ISS-billing-unexpected_charges,Unauthorized charges after cancellation,billing_support,11,41,3.727273,41,0,6,5,5
+26,ISS-downloads-download_fails,Songs fail to download for offline use,downloads,13,34,2.615385,34,0,1,0,3
+27,ISS-access-signup,Account signup blocked or data demands,access,12,31,2.583333,31,2,2,0,7
+28,ISS-access-account_hacked,Account hacked with poor security,access,6,29,4.833333,29,0,6,5,3
+29,ISS-catalog-podcasts_and_audiobooks,Podcast and audiobook playback issues,catalog,13,29,2.230769,29,0,0,0,0
+30,ISS-other-unrelated_or_unclear,Unrelated complaints and unclear issues,other,20,29,1.450000,29,11,0,0,16
+31,ISS-support-unhelpful_response,Customer support provides unhelpful responses,billing_support,10,29,2.900000,29,0,2,0,1
+32,ISS-access-account_recovery,Account recovery and password reset failures,access,5,17,3.400000,17,1,3,0,1
+33,ISS-playback-battery_or_resource,Excessive battery and data consumption,playback,7,14,2.000000,14,0,0,0,0
+34,ISS-downloads-storage,Cannot save downloads to SD card,downloads,5,12,2.400000,12,0,0,0,1
+35,ISS-support-no_response,Customer support ignores user messages,billing_support,4,12,3.000000,12,0,0,0,1
+36,ISS-billing-refunds,Refunds denied for service failures,billing_support,2,6,3.000000,6,1,1,0,1

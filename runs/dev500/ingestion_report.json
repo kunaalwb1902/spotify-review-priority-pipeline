@@ -1,0 +1,112 @@
+{
+  "counts": {
+    "distinct_nonempty_texts": 479,
+    "duplicate_review_ids": 0,
+    "empty_review_text_quarantined": 0,
+    "exact_duplicate_text_groups": 11,
+    "missing_app_version": 108,
+    "nonempty_to_classify": 500,
+    "records": 500,
+    "rows_reusable_by_exact_text": 21
+  },
+  "first_review": "2022-05-19 14:22:29",
+  "input_path": "data/raw/checkpoint_500.csv",
+  "input_sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f",
+  "last_review": "2023-11-15 15:44:48",
+  "manifest_check": {
+    "status": "not_the_full_file"
+  },
+  "most_repeated_texts": [
+    {
+      "count": 7,
+      "text": "Good"
+    },
+    {
+      "count": 4,
+      "text": "Great"
+    },
+    {
+      "count": 3,
+      "text": "Worst app"
+    },
+    {
+      "count": 3,
+      "text": "Excellent"
+    },
+    {
+      "count": 3,
+      "text": "Nice"
+    },
+    {
+      "count": 2,
+      "text": "Love it"
+    },
+    {
+      "count": 2,
+      "text": "Op"
+    },
+    {
+      "count": 2,
+      "text": "Superb"
+    },
+    {
+      "count": 2,
+      "text": "Hate this application"
+    },
+    {
+      "count": 2,
+      "text": "Very good"
+    },
+    {
+      "count": 2,
+      "text": "Awesome"
+    },
+    {
+      "count": 1,
+      "text": "Thik thak hi hai"
+    },
+    {
+      "count": 1,
+      "text": "Good at all"
+    },
+    {
+      "count": 1,
+      "text": "You can't even listen to music you want it just shuffles it, like what the hell? This app is killing it self and forcing you to pay premium for basic things like just listening to music."
+    },
+    {
+      "count": 1,
+      "text": "This was fine till the last update, now you can't even pick a certain song without Spotify premium, and now you can only skip 6 songs, like please just let the songs fit my mood!"
+    }
+  ],
+  "notes": "Missing app_version does not block classification. Raw values are stored unchanged.",
+  "quarantine_rule": "review_text.strip() == '' -> status quarantined, reason empty_review_text",
+  "reviews_by_month": {
+    "2022-05": 14,
+    "2022-06": 19,
+    "2022-07": 21,
+    "2022-08": 31,
+    "2022-09": 22,
+    "2022-10": 18,
+    "2022-11": 18,
+    "2022-12": 21,
+    "2023-01": 17,
+    "2023-02": 23,
+    "2023-03": 20,
+    "2023-04": 21,
+    "2023-05": 22,
+    "2023-06": 19,
+    "2023-07": 56,
+    "2023-08": 26,
+    "2023-09": 25,
+    "2023-10": 79,
+    "2023-11": 28
+  },
+  "reviews_by_rating": {
+    "1": 187,
+    "2": 33,
+    "3": 19,
+    "4": 45,
+    "5": 216
+  },
+  "seconds": 0.01
+}

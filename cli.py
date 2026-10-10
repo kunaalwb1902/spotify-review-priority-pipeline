@@ -93,6 +93,20 @@ def main():
         print({k: out.get(k) for k in ("run_id", "partial", "total_cost_usd", "ranking_sha256", "stopped", "pending")})
         return
 
+    if args.cmd == "rank":               # needs only saved files - no database, model or API key
+        from pipeline.rank import rank
+        ts = None
+        if (run / "pipeline.db").exists():
+            import sqlite3
+            ts = dict(sqlite3.connect(run / "pipeline.db").execute("SELECT review_id, review_timestamp FROM reviews"))
+        rows, areas, digest = rank(run, ts)
+        print(f"{'rank':>4}  {'issue_id':<48} {'count':>8} {'sev_sum':>8} {'mean':>9}")
+        for r in rows[:15]:
+            print(f"{r['rank']:>4}  {r['issue_id']:<48} {r['complaint_count']:>8} {r['severity_sum']:>8} {r['mean_severity']:>9}")
+        print(f"... {len(rows)} issues | ranking.csv sha256 {digest}"
+              + ("" if ts else " | monthly_trend.csv skipped (no pipeline.db)"))
+        return
+
     from pipeline.common import connect
     from pipeline.prompts import build_enricher
     cfg = _cfg(args)
@@ -134,15 +148,6 @@ def main():
             names, _ = name_issues(con, make_llm(con, cfg, _client(cfg), "group"), cfg, members, quotes)
         write_group_outputs(run, members, quotes, names)
         print(f"issues={len(members)} memberships={sum(map(len, members.values()))}")
-
-    elif args.cmd == "rank":
-        from pipeline.rank import rank
-        ts = {r[0]: r[1] for r in con.execute("SELECT review_id, review_timestamp FROM reviews")}
-        rows, areas, digest = rank(run, ts)
-        print(f"{'rank':>4}  {'issue_id':<48} {'count':>8} {'sev_sum':>8} {'mean':>9}")
-        for r in rows[:15]:
-            print(f"{r['rank']:>4}  {r['issue_id']:<48} {r['complaint_count']:>8} {r['severity_sum']:>8} {r['mean_severity']:>9}")
-        print(f"... {len(rows)} issues | ranking.csv sha256 {digest}")
 
     elif args.cmd == "memo":
         from pipeline.memo import write_memo

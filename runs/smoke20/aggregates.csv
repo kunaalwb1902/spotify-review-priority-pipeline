@@ -1,0 +1,8 @@
+rank,issue_id,name,product_area,complaint_count,severity_sum,mean_severity,priority_score,cancellation_count,severity_4_plus,severity_5,needs_review_count
+1,ISS-other-general_criticism,Other: general criticism,other,4,8,2.000000,8,0,0,0,0
+2,ISS-billing-premium_only_features,Billing: premium only features,billing_support,2,5,2.500000,5,0,0,0,0
+3,ISS-billing-subscription_activation,Billing: subscription activation,billing_support,1,4,4.000000,4,0,1,0,0
+4,ISS-playback-crash_or_wont_open,Playback: crash or wont open,playback,1,4,4.000000,4,1,1,0,0
+5,ISS-catalog-missing_content,Catalog: missing content,catalog,1,2,2.000000,2,0,0,0,0
+6,ISS-catalog-recommendations_and_unwanted_songs,Catalog: recommendations and unwanted songs,catalog,1,2,2.000000,2,0,0,0,0
+7,ISS-usability-ads,Usability: ads,usability,1,2,2.000000,2,0,0,0,0

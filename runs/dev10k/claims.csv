@@ -1,0 +1,9 @@
+claim_id,issue_id,metric,value
+C01,ISS-billing-premium_only_features,complaint_count,695
+C02,ISS-billing-premium_only_features,severity_sum,1943
+C03,ISS-billing-premium_only_features,mean_severity,2.795683
+C04,ISS-billing-premium_only_features,priority_score,1943
+C05,ISS-usability-ads,severity_sum,1333
+C06,ISS-playback-crash_or_wont_open,severity_sum,849
+C07,ISS-other-general_criticism,severity_sum,2431
+C08,ISS-other-general_criticism,mean_severity,1.997535

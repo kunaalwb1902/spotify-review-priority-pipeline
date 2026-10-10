@@ -1,0 +1,140 @@
+{
+  "audit_script_sha256": "d60bd66d84922d934c65b3d42b2c7d36cc738e8c75e2d6f2b2f58bca3141c26d",
+  "audit_version": "a5-audit-v1",
+  "automatic_grade": null,
+  "calculated_ranking": [
+    {
+      "complaint_count": 4,
+      "issue_id": "ISS-other-general_criticism",
+      "mean_severity": "2.000000",
+      "priority_score": 8,
+      "rank": 1,
+      "severity_sum": 8
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-billing-premium_only_features",
+      "mean_severity": "2.500000",
+      "priority_score": 5,
+      "rank": 2,
+      "severity_sum": 5
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-billing-subscription_activation",
+      "mean_severity": "4.000000",
+      "priority_score": 4,
+      "rank": 3,
+      "severity_sum": 4
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-playback-crash_or_wont_open",
+      "mean_severity": "4.000000",
+      "priority_score": 4,
+      "rank": 4,
+      "severity_sum": 4
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-catalog-missing_content",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 5,
+      "severity_sum": 2
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-catalog-recommendations_and_unwanted_songs",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 6,
+      "severity_sum": 2
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-usability-ads",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 7,
+      "severity_sum": 2
+    }
+  ],
+  "coverage": {
+    "accounted_fraction": 1.0,
+    "duplicate_ids": 0,
+    "expected": 20,
+    "invalid_or_unresolved": 0,
+    "labelable": 20,
+    "labelable_completion_fraction": 1.0,
+    "missing": 0,
+    "quarantined": 0,
+    "received_lines": 20,
+    "unique_expected_ids": 20,
+    "valid_cache_reuses": 0,
+    "valid_completed": 20,
+    "valid_completion_fraction": 1.0
+  },
+  "examples": [
+    {
+      "code": "unreadable_file",
+      "detail": "claims.csv: [Errno 2] No such file or directory: 'grading/claims.csv'"
+    },
+    {
+      "code": "missing_claims",
+      "detail": "Export numerical memo claims for cross-checking."
+    },
+    {
+      "code": "unreadable_file",
+      "detail": "checkpoint_before.json: [Errno 2] No such file or directory: 'grading/checkpoint_before.json'"
+    },
+    {
+      "code": "unreadable_file",
+      "detail": "checkpoint_after.json: [Errno 2] No such file or directory: 'grading/checkpoint_after.json'"
+    },
+    {
+      "code": "resume_snapshot_mismatch",
+      "detail": "Need a nonempty checkpoint and additional completed IDs after resume."
+    },
+    {
+      "code": "resume_call_evidence",
+      "detail": "Need successful initial calls before the checkpoint and new completed calls after resume."
+    },
+    {
+      "code": "missing_model_roles",
+      "detail": "['group', 'memo', 'verify']"
+    }
+  ],
+  "hash_convention": "Reference/benchmark: canonical UTF-8 JSON via canonical(); input files and audit script: exact bytes.",
+  "input_files_sha256": {
+    "calls.jsonl": "c21001aeb9f576f58d6367086ed94cff4a529cf53fcb5c02cc155ba1a1ccfc19",
+    "ingestion.json": "cc627cf1e98e77404dfac3e60978b7bc3f64f059044d73804fc2b39db5486c8e",
+    "membership.csv": "41d92748bbcc22cb537b57135e72ef5dd064ee17b214c282e8d1aaffe6330096",
+    "ranking.csv": "529b5b482326d372d06f968df73fc9e4b587b813ea18bbd2938b9f472cd3a3cf",
+    "records.jsonl": "17bc0ce8c601b9c00ab26c0465d149906b5288a9f4331512b0943544e7465668",
+    "run.json": "124ff57154cf37e16c2c45b83ac5c3a075030571395d8f20d70b30b330062191"
+  },
+  "issue_counts": {
+    "missing_claims": 1,
+    "missing_model_roles": 1,
+    "resume_call_evidence": 1,
+    "resume_snapshot_mismatch": 1,
+    "unreadable_file": 3
+  },
+  "limits": [
+    "Artifacts do not prove actual model execution, authorship, cost, or independent verification.",
+    "Exact quote membership does not prove that the quote supports the label.",
+    "Claims export checks numbers; a person must check that all memo claims are represented.",
+    "Benchmark agreement is diagnostic; final 4/3/3 grades require rubric review."
+  ],
+  "quality": {
+    "official": false,
+    "status": "not_supplied"
+  },
+  "reference_sha256": "774b41202e0e4d99ffd47dc2258711ff321c5262dba406853fe0576fda2cb540",
+  "reported_calls": 2,
+  "reported_input_tokens": 12170,
+  "reported_output_tokens": 1388,
+  "status": "review_required",
+  "working_coverage_point_candidate": 1.0
+}

@@ -1,0 +1,8 @@
+rank,issue_id,complaint_count,severity_sum,mean_severity,priority_score
+1,ISS-other-general_criticism,4,8,2.000000,8
+2,ISS-billing-premium_only_features,2,5,2.500000,5
+3,ISS-billing-subscription_activation,1,4,4.000000,4
+4,ISS-playback-crash_or_wont_open,1,4,4.000000,4
+5,ISS-catalog-missing_content,1,2,2.000000,2
+6,ISS-catalog-recommendations_and_unwanted_songs,1,2,2.000000,2
+7,ISS-usability-ads,1,2,2.000000,2

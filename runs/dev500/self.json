@@ -1,0 +1,296 @@
+{
+  "audit_script_sha256": "d60bd66d84922d934c65b3d42b2c7d36cc738e8c75e2d6f2b2f58bca3141c26d",
+  "audit_version": "a5-audit-v1",
+  "automatic_grade": null,
+  "calculated_ranking": [
+    {
+      "complaint_count": 57,
+      "issue_id": "ISS-other-general_criticism",
+      "mean_severity": "2.000000",
+      "priority_score": 114,
+      "rank": 1,
+      "severity_sum": 114
+    },
+    {
+      "complaint_count": 42,
+      "issue_id": "ISS-billing-premium_only_features",
+      "mean_severity": "2.666667",
+      "priority_score": 112,
+      "rank": 2,
+      "severity_sum": 112
+    },
+    {
+      "complaint_count": 33,
+      "issue_id": "ISS-usability-ads",
+      "mean_severity": "2.090909",
+      "priority_score": 69,
+      "rank": 3,
+      "severity_sum": 69
+    },
+    {
+      "complaint_count": 13,
+      "issue_id": "ISS-playback-stops_or_pauses",
+      "mean_severity": "3.384615",
+      "priority_score": 44,
+      "rank": 4,
+      "severity_sum": 44
+    },
+    {
+      "complaint_count": 11,
+      "issue_id": "ISS-playback-crash_or_wont_open",
+      "mean_severity": "3.272727",
+      "priority_score": 36,
+      "rank": 5,
+      "severity_sum": 36
+    },
+    {
+      "complaint_count": 13,
+      "issue_id": "ISS-usability-shuffle_and_song_choice",
+      "mean_severity": "2.538462",
+      "priority_score": 33,
+      "rank": 6,
+      "severity_sum": 33
+    },
+    {
+      "complaint_count": 6,
+      "issue_id": "ISS-access-login_failure",
+      "mean_severity": "3.833333",
+      "priority_score": 23,
+      "rank": 7,
+      "severity_sum": 23
+    },
+    {
+      "complaint_count": 8,
+      "issue_id": "ISS-playback-connectivity",
+      "mean_severity": "2.875000",
+      "priority_score": 23,
+      "rank": 8,
+      "severity_sum": 23
+    },
+    {
+      "complaint_count": 9,
+      "issue_id": "ISS-usability-ui_redesign",
+      "mean_severity": "2.111111",
+      "priority_score": 19,
+      "rank": 9,
+      "severity_sum": 19
+    },
+    {
+      "complaint_count": 7,
+      "issue_id": "ISS-catalog-missing_content",
+      "mean_severity": "2.428571",
+      "priority_score": 17,
+      "rank": 10,
+      "severity_sum": 17
+    },
+    {
+      "complaint_count": 7,
+      "issue_id": "ISS-usability-navigation_and_controls",
+      "mean_severity": "2.285714",
+      "priority_score": 16,
+      "rank": 11,
+      "severity_sum": 16
+    },
+    {
+      "complaint_count": 6,
+      "issue_id": "ISS-catalog-recommendations_and_unwanted_songs",
+      "mean_severity": "2.166667",
+      "priority_score": 13,
+      "rank": 12,
+      "severity_sum": 13
+    },
+    {
+      "complaint_count": 5,
+      "issue_id": "ISS-catalog-lyrics_availability",
+      "mean_severity": "2.200000",
+      "priority_score": 11,
+      "rank": 13,
+      "severity_sum": 11
+    },
+    {
+      "complaint_count": 3,
+      "issue_id": "ISS-billing-subscription_activation",
+      "mean_severity": "3.333333",
+      "priority_score": 10,
+      "rank": 14,
+      "severity_sum": 10
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-access-logged_out_or_session",
+      "mean_severity": "4.000000",
+      "priority_score": 8,
+      "rank": 15,
+      "severity_sum": 8
+    },
+    {
+      "complaint_count": 3,
+      "issue_id": "ISS-playback-device_integration",
+      "mean_severity": "2.666667",
+      "priority_score": 8,
+      "rank": 16,
+      "severity_sum": 8
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-downloads-storage",
+      "mean_severity": "3.000000",
+      "priority_score": 6,
+      "rank": 17,
+      "severity_sum": 6
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-access-account_hacked",
+      "mean_severity": "5.000000",
+      "priority_score": 5,
+      "rank": 18,
+      "severity_sum": 5
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-downloads-offline_mode",
+      "mean_severity": "2.500000",
+      "priority_score": 5,
+      "rank": 19,
+      "severity_sum": 5
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-billing-price",
+      "mean_severity": "2.000000",
+      "priority_score": 4,
+      "rank": 20,
+      "severity_sum": 4
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-downloads-downloads_disappear",
+      "mean_severity": "4.000000",
+      "priority_score": 4,
+      "rank": 21,
+      "severity_sum": 4
+    },
+    {
+      "complaint_count": 2,
+      "issue_id": "ISS-other-unrelated_or_unclear",
+      "mean_severity": "1.500000",
+      "priority_score": 3,
+      "rank": 22,
+      "severity_sum": 3
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-playback-lag_or_buffering",
+      "mean_severity": "3.000000",
+      "priority_score": 3,
+      "rank": 23,
+      "severity_sum": 3
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-usability-queue_and_playlist_management",
+      "mean_severity": "3.000000",
+      "priority_score": 3,
+      "rank": 24,
+      "severity_sum": 3
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-downloads-download_fails",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 25,
+      "severity_sum": 2
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-playback-audio_quality",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 26,
+      "severity_sum": 2
+    },
+    {
+      "complaint_count": 1,
+      "issue_id": "ISS-support-unhelpful_response",
+      "mean_severity": "2.000000",
+      "priority_score": 2,
+      "rank": 27,
+      "severity_sum": 2
+    }
+  ],
+  "coverage": {
+    "accounted_fraction": 1.0,
+    "duplicate_ids": 0,
+    "expected": 500,
+    "invalid_or_unresolved": 0,
+    "labelable": 500,
+    "labelable_completion_fraction": 1.0,
+    "missing": 0,
+    "quarantined": 0,
+    "received_lines": 500,
+    "unique_expected_ids": 500,
+    "valid_cache_reuses": 21,
+    "valid_completed": 500,
+    "valid_completion_fraction": 1.0
+  },
+  "examples": [
+    {
+      "code": "unreadable_file",
+      "detail": "checkpoint_before.json: [Errno 2] No such file or directory: 'grading/checkpoint_before.json'"
+    },
+    {
+      "code": "unreadable_file",
+      "detail": "checkpoint_after.json: [Errno 2] No such file or directory: 'grading/checkpoint_after.json'"
+    },
+    {
+      "code": "resume_snapshot_mismatch",
+      "detail": "Need a nonempty checkpoint and additional completed IDs after resume."
+    },
+    {
+      "code": "call_config_mismatch",
+      "detail": "89ea2c30-db8b-459d-8ab7-bbcb7f92c774"
+    },
+    {
+      "code": "call_config_mismatch",
+      "detail": "89ea2c30-db8b-459d-8ab7-bbcb7f92c774"
+    },
+    {
+      "code": "resume_call_evidence",
+      "detail": "Need successful initial calls before the checkpoint and new completed calls after resume."
+    }
+  ],
+  "hash_convention": "Reference/benchmark: canonical UTF-8 JSON via canonical(); input files and audit script: exact bytes.",
+  "input_files_sha256": {
+    "calls.jsonl": "4a9e1fc805cc2e7c972a79f93558d12ac79625ef9790588d619a9f881287f051",
+    "claims.csv": "cf26f060a81765086b8778c236eb3b3ad3c86bb730c64f95d0b555452b7876ed",
+    "ingestion.json": "6ab75c45fc1ea4559b7efbb375a2f7c2e411520d82c56452e3dc930a869c5bee",
+    "membership.csv": "49619a91b024ba045331d786183994c1ce4ada12ca26176960aa0b1233d33842",
+    "ranking.csv": "fdd25341a4fa0b043cabfbf8b7d79de4ced3074ae7bf8054b6e1bc8f05259897",
+    "records.jsonl": "08d94cf17b5fb35ab0fee4b066403c4903713f893d96082d38fa09b172b4df4a",
+    "run.json": "cdc83d4ae8d8ec7035f7755f6d051c8e4f3a42add69e11b9a002ea49415ec8ba"
+  },
+  "issue_counts": {
+    "call_config_mismatch": 2,
+    "resume_call_evidence": 1,
+    "resume_snapshot_mismatch": 1,
+    "unreadable_file": 2
+  },
+  "limits": [
+    "Artifacts do not prove actual model execution, authorship, cost, or independent verification.",
+    "Exact quote membership does not prove that the quote supports the label.",
+    "Claims export checks numbers; a person must check that all memo claims are represented.",
+    "Benchmark agreement is diagnostic; final 4/3/3 grades require rubric review."
+  ],
+  "quality": {
+    "official": false,
+    "status": "not_supplied"
+  },
+  "reference_sha256": "f68d6632a57cd062e849eeb273faca916de1c7a850d9d515485c849f27717e1c",
+  "reported_calls": 16,
+  "reported_input_tokens": 104583,
+  "reported_output_tokens": 35656,
+  "status": "review_required",
+  "working_coverage_point_candidate": 1.0
+}

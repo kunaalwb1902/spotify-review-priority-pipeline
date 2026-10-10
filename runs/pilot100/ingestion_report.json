@@ -1,0 +1,111 @@
+{
+  "counts": {
+    "distinct_nonempty_texts": 100,
+    "duplicate_review_ids": 0,
+    "empty_review_text_quarantined": 0,
+    "exact_duplicate_text_groups": 0,
+    "missing_app_version": 18,
+    "nonempty_to_classify": 100,
+    "records": 100,
+    "rows_reusable_by_exact_text": 0
+  },
+  "first_review": "2022-06-02 10:30:18",
+  "input_path": "/Users/kunaal.wadekar.bhargava/Documents/Agentic AI Assignments/Final Assignment/data/raw/cost_100.csv",
+  "input_sha256": "c884ac3b9be5066995d5063f96ad9af6e5e082975788c1684c4f6b6ea661dd0e",
+  "last_review": "2023-11-13 15:07:19",
+  "manifest_check": {
+    "status": "not_the_full_file"
+  },
+  "most_repeated_texts": [
+    {
+      "count": 1,
+      "text": "Thik thak hi hai"
+    },
+    {
+      "count": 1,
+      "text": "Good at all"
+    },
+    {
+      "count": 1,
+      "text": "Great"
+    },
+    {
+      "count": 1,
+      "text": "You can't even listen to music you want it just shuffles it, like what the hell? This app is killing it self and forcing you to pay premium for basic things like just listening to music."
+    },
+    {
+      "count": 1,
+      "text": "This was fine till the last update, now you can't even pick a certain song without Spotify premium, and now you can only skip 6 songs, like please just let the songs fit my mood!"
+    },
+    {
+      "count": 1,
+      "text": "Love it"
+    },
+    {
+      "count": 1,
+      "text": "Fantastic experience"
+    },
+    {
+      "count": 1,
+      "text": "Awesome app and music"
+    },
+    {
+      "count": 1,
+      "text": "Best for listening songs"
+    },
+    {
+      "count": 1,
+      "text": "Kudos spotify"
+    },
+    {
+      "count": 1,
+      "text": "Great music"
+    },
+    {
+      "count": 1,
+      "text": "Why it requires premium just to play next music / to choose music ?? And why the specific part of song cannot be played ?"
+    },
+    {
+      "count": 1,
+      "text": "Excellent!"
+    },
+    {
+      "count": 1,
+      "text": "Good aap"
+    },
+    {
+      "count": 1,
+      "text": "Top music app and i can see why."
+    }
+  ],
+  "notes": "Missing app_version does not block classification. Raw values are stored unchanged.",
+  "quarantine_rule": "review_text.strip() == '' -> status quarantined, reason empty_review_text",
+  "reviews_by_month": {
+    "2022-06": 5,
+    "2022-07": 5,
+    "2022-08": 6,
+    "2022-09": 5,
+    "2022-10": 4,
+    "2022-11": 1,
+    "2022-12": 2,
+    "2023-01": 4,
+    "2023-02": 4,
+    "2023-03": 7,
+    "2023-04": 4,
+    "2023-05": 5,
+    "2023-06": 4,
+    "2023-07": 11,
+    "2023-08": 3,
+    "2023-09": 6,
+    "2023-10": 19,
+    "2023-11": 5
+  },
+  "reviews_by_rating": {
+    "1": 33,
+    "2": 8,
+    "3": 6,
+    "4": 10,
+    "5": 43
+  },
+  "seconds": 0.0
+}

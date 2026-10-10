@@ -1,0 +1,105 @@
+{
+  "controls": {
+    "backoff_base_seconds": 2.0,
+    "backoff_max_seconds": 60.0,
+    "max_api_attempts": 4,
+    "request_timeout_seconds": 120,
+    "spend_cap_usd": 3.0,
+    "workers": 1
+  },
+  "input_csv": "data/raw/checkpoint_500.csv",
+  "input_sha256": "a94e31663ee7b7eaa77e23b7a8425b530cc0c866ed5e714953172a0afef6a12f",
+  "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+  "models": {
+    "enrich": "claude-haiku-4-5",
+    "fallback": "claude-sonnet-5-5",
+    "group": "claude-haiku-4-5",
+    "memo": "claude-sonnet-5-5",
+    "verify": "claude-haiku-4-5"
+  },
+  "partial": false,
+  "ranking_sha256": "fdd25341a4fa0b043cabfbf8b7d79de4ced3074ae7bf8054b6e1bc8f05259897",
+  "records": {
+    "complaint_or_cancellation": 240,
+    "completed": 500,
+    "completed_via_cache": 21,
+    "needs_review": 56,
+    "quarantined_empty": 0,
+    "quarantined_model": 0,
+    "records": 500,
+    "unprocessed": 0
+  },
+  "run_id": "run-20261010T085310",
+  "sessions": [
+    {
+      "ended_at": 1791647724.129986,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "initial",
+      "role": "enrich",
+      "session_id": "enrich-20261010T085310-7e9c6f",
+      "started_at": 1791647590.812096,
+      "stop_reason": "completed",
+      "texts_completed": 479,
+      "texts_quarantined": 0
+    }
+  ],
+  "total_cost_usd": 0.261096,
+  "usage_by_role": {
+    "enrich|claude-haiku-4-5|standard": {
+      "attempts": 12,
+      "cache_creation_input_tokens": 11552,
+      "cache_read_input_tokens": 57760,
+      "cost_usd": 0.198041,
+      "failed": 0,
+      "input_tokens": 16550,
+      "output_tokens": 32255,
+      "succeeded": 12,
+      "summed_call_seconds": 254.63
+    },
+    "enrich|claude-sonnet-5-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 7747,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.020734,
+      "failed": 0,
+      "input_tokens": 173,
+      "output_tokens": 102,
+      "succeeded": 1,
+      "summed_call_seconds": 2.23
+    },
+    "group|claude-haiku-4-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.009296,
+      "failed": 0,
+      "input_tokens": 2821,
+      "output_tokens": 1295,
+      "succeeded": 1,
+      "summed_call_seconds": 14.32
+    },
+    "memo|claude-sonnet-5-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.03005,
+      "failed": 0,
+      "input_tokens": 6215,
+      "output_tokens": 1762,
+      "succeeded": 1,
+      "summed_call_seconds": 11.65
+    },
+    "verify|claude-haiku-4-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.002975,
+      "failed": 0,
+      "input_tokens": 1765,
+      "output_tokens": 242,
+      "succeeded": 1,
+      "summed_call_seconds": 3.14
+    }
+  },
+  "wall_clock_seconds_this_invocation": 162.53
+}

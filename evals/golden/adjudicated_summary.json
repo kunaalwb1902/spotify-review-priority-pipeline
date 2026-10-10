@@ -1,0 +1,21 @@
+{
+  "n": 50,
+  "original": {
+    "topic": 0.68,
+    "intent": 0.88,
+    "severity_exact": 0.78
+  },
+  "adjudicated": {
+    "topic": 0.98,
+    "intent": 0.98,
+    "severity": 0.96
+  },
+  "method": "Each disagreement adjudicated against the shared rules (assistant draft, human verdict). Model counted correct where its label follows the rules or the case is genuinely ambiguous; field-level split for 2 mixed cases. Original golden labels are unchanged and remain the headline numbers.",
+  "verdicts": {
+    "ambiguous": 3,
+    "human_consistent": 1,
+    "human_inconsistent_with_rules": 4,
+    "mixed": 2,
+    "model_consistent": 15
+  }
+}

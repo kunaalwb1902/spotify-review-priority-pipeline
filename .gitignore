@@ -18,3 +18,11 @@ __pycache__/
 *.db
 *.db-wal
 *.db-shm
+
+# Large / regenerable run artifacts (full grading/ folder ships as the grading.zip release asset)
+runs/**/local-reference.json
+runs/**/ref.json
+runs/full/records.jsonl
+runs/full/calls.jsonl
+runs/full/checkpoint_*.json
+runs/full/grading/

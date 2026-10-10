@@ -1,0 +1,11 @@
+claim_id,issue_id,metric,value
+C01,ISS-usability-ads,complaint_count,8
+C02,ISS-usability-ads,priority_score,17
+C03,ISS-usability-shuffle_and_song_choice,complaint_count,3
+C04,ISS-usability-shuffle_and_song_choice,mean_severity,3.000000
+C05,ISS-billing-premium_only_features,priority_score,24
+C06,ISS-playback-crash_or_wont_open,priority_score,8
+C07,ISS-access-login_failure,mean_severity,4.000000
+C08,ISS-access-login_failure,complaint_count,2
+C09,ISS-other-general_criticism,complaint_count,12
+C10,ISS-other-general_criticism,priority_score,24

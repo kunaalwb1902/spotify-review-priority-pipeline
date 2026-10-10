@@ -1,0 +1,59 @@
+[resume] round 1: 134,189 first-attempt + 2,818 retry texts (claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88)
+  submit failed (BadRequestError: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too lo); texts stay pending
+  stop: submit_failed: BadRequestError | {"session_id": "enrich-20261010T094023-cbc96f", "phase": "resume", "transport": "batch", "stop_reason": "submit_failed: BadRequestError", "texts_completed": 0, "texts_quarantined": 0, "texts_errored_left_pending": 0, "wall_clock_seconds": 2.8, "spent_usd": 70.893705}
+[resume] round 1: 134,189 first-attempt + 2,818 retry texts (claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88)
+  submitted msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: 500 requests / 25,000 texts (first)
+  submitted msgbatch_018a8ZwpbupA4VaPkKa6EBbX: 500 requests / 25,000 texts (first)
+  submitted msgbatch_017awAe5c4ZfPcePiKbqdiFX: 500 requests / 25,000 texts (first)
+  submitted msgbatch_018LrqEFjB4GFaiL5huHKUyu: 500 requests / 25,000 texts (first)
+  submitted msgbatch_011f57zQsMeTg23ZtU4DeCVu: 500 requests / 25,000 texts (first)
+  submitted msgbatch_01AJxD31eSoib5X6TwMhBYhR: 184 requests / 9,189 texts (first)
+  submitted msgbatch_01CUZwBK2SYV9gwpVEeftbLW: 282 requests / 2,818 texts (retry_invalid)
+  msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: in_progress (processing 500, done 0)
+  msgbatch_018a8ZwpbupA4VaPkKa6EBbX: in_progress (processing 500, done 0)
+  msgbatch_017awAe5c4ZfPcePiKbqdiFX: in_progress (processing 500, done 0)
+  msgbatch_018LrqEFjB4GFaiL5huHKUyu: in_progress (processing 500, done 0)
+  msgbatch_011f57zQsMeTg23ZtU4DeCVu: in_progress (processing 500, done 0)
+  msgbatch_01AJxD31eSoib5X6TwMhBYhR: in_progress (processing 184, done 0)
+  msgbatch_01CUZwBK2SYV9gwpVEeftbLW: in_progress (processing 282, done 0)
+  msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: in_progress (processing 500, done 0)
+  msgbatch_018a8ZwpbupA4VaPkKa6EBbX: in_progress (processing 500, done 0)
+  msgbatch_017awAe5c4ZfPcePiKbqdiFX: in_progress (processing 500, done 0)
+  msgbatch_018LrqEFjB4GFaiL5huHKUyu: in_progress (processing 500, done 0)
+  msgbatch_011f57zQsMeTg23ZtU4DeCVu: in_progress (processing 500, done 0)
+  msgbatch_01AJxD31eSoib5X6TwMhBYhR: in_progress (processing 184, done 0)
+  msgbatch_01CUZwBK2SYV9gwpVEeftbLW: in_progress (processing 282, done 0)
+  msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: in_progress (processing 500, done 0)
+  msgbatch_018a8ZwpbupA4VaPkKa6EBbX: in_progress (processing 500, done 0)
+  msgbatch_017awAe5c4ZfPcePiKbqdiFX: in_progress (processing 500, done 0)
+  msgbatch_018LrqEFjB4GFaiL5huHKUyu: in_progress (processing 500, done 0)
+  msgbatch_011f57zQsMeTg23ZtU4DeCVu: in_progress (processing 500, done 0)
+  msgbatch_01AJxD31eSoib5X6TwMhBYhR: in_progress (processing 184, done 0)
+  msgbatch_01CUZwBK2SYV9gwpVEeftbLW: in_progress (processing 282, done 0)
+  msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: in_progress (processing 500, done 0)
+  msgbatch_018a8ZwpbupA4VaPkKa6EBbX: in_progress (processing 500, done 0)
+  msgbatch_017awAe5c4ZfPcePiKbqdiFX: in_progress (processing 500, done 0)
+  msgbatch_018LrqEFjB4GFaiL5huHKUyu: in_progress (processing 500, done 0)
+  msgbatch_011f57zQsMeTg23ZtU4DeCVu: in_progress (processing 500, done 0)
+  msgbatch_01AJxD31eSoib5X6TwMhBYhR: in_progress (processing 184, done 0)
+  msgbatch_01CUZwBK2SYV9gwpVEeftbLW: in_progress (processing 282, done 0)
+  msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: in_progress (processing 500, done 0)
+  msgbatch_018a8ZwpbupA4VaPkKa6EBbX: in_progress (processing 500, done 0)
+  msgbatch_017awAe5c4ZfPcePiKbqdiFX: in_progress (processing 500, done 0)
+  msgbatch_018LrqEFjB4GFaiL5huHKUyu: in_progress (processing 500, done 0)
+  msgbatch_011f57zQsMeTg23ZtU4DeCVu: in_progress (processing 500, done 0)
+  msgbatch_01AJxD31eSoib5X6TwMhBYhR: in_progress (processing 184, done 0)
+  msgbatch_01CUZwBK2SYV9gwpVEeftbLW: in_progress (processing 282, done 0)
+  collected msgbatch_01Bn7EK4iwj1wDLtkLok1tzQ: +24,678 ok, 322 invalid (0 quarantined), 0 errored | $5.2675
+  collected msgbatch_018a8ZwpbupA4VaPkKa6EBbX: +24,704 ok, 296 invalid (0 quarantined), 0 errored | $5.3187
+  collected msgbatch_017awAe5c4ZfPcePiKbqdiFX: +24,617 ok, 383 invalid (0 quarantined), 0 errored | $5.1565
+  collected msgbatch_018LrqEFjB4GFaiL5huHKUyu: +24,698 ok, 302 invalid (0 quarantined), 0 errored | $5.0979
+  collected msgbatch_011f57zQsMeTg23ZtU4DeCVu: +24,749 ok, 251 invalid (0 quarantined), 0 errored | $5.0552
+  collected msgbatch_01AJxD31eSoib5X6TwMhBYhR: +9,107 ok, 82 invalid (0 quarantined), 0 errored | $1.8800
+  collected msgbatch_01CUZwBK2SYV9gwpVEeftbLW: +2,091 ok, 727 invalid (727 quarantined), 0 errored | $0.7568
+[resume] round 2: 0 first-attempt + 1,636 retry texts (claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88)
+  submitted msgbatch_01L89hyGEmjAzRbsGxWEiiU8: 164 requests / 1,636 texts (retry_invalid)
+  msgbatch_01L89hyGEmjAzRbsGxWEiiU8: in_progress (processing 164, done 0)
+  msgbatch_01L89hyGEmjAzRbsGxWEiiU8: in_progress (processing 164, done 0)
+  collected msgbatch_01L89hyGEmjAzRbsGxWEiiU8: +1,300 ok, 336 invalid (336 quarantined), 0 errored | $0.4352
+  stop: completed | {"session_id": "enrich-20261010T094247-5eb14f", "phase": "resume", "transport": "batch", "stop_reason": "completed", "texts_completed": 135944, "texts_quarantined": 1063, "texts_errored_left_pending": 0, "wall_clock_seconds": 464.24, "spent_usd": 99.861626}

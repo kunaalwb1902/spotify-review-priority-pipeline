@@ -1,0 +1,138 @@
+{
+  "controls": {
+    "backoff_base_seconds": 2.0,
+    "backoff_max_seconds": 60.0,
+    "max_api_attempts": 4,
+    "request_timeout_seconds": 120,
+    "spend_cap_usd": 150.0,
+    "workers": 1
+  },
+  "input_csv": "data/raw/spotify_reviews_18months.csv",
+  "input_sha256": "1fc85de68a304dd8978b537cfa58793d5f41cbaf417fa32cb53899f83a2fcef6",
+  "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+  "models": {
+    "enrich": "claude-haiku-4-5",
+    "fallback": "claude-sonnet-5-5",
+    "group": "claude-haiku-4-5",
+    "memo": "claude-sonnet-5-5",
+    "verify": "claude-haiku-4-5"
+  },
+  "partial": false,
+  "ranking_sha256": "d481f928e6b93d72c645923b984c1b260a19bdd31030b66af0a3c727a774e064",
+  "records": {
+    "complaint_or_cancellation": 288755,
+    "completed": 659541,
+    "completed_via_cache": 176415,
+    "needs_review": 86714,
+    "quarantined_empty": 13,
+    "quarantined_model": 1068,
+    "records": 660622,
+    "unprocessed": 0
+  },
+  "run_id": "run-20261010T095057",
+  "sessions": [
+    {
+      "ended_at": 1791649851.039915,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "initial",
+      "role": "enrich",
+      "session_id": "enrich-20261010T092703-a37a5c",
+      "started_at": 1791649626.134114,
+      "stop_reason": "stopped with texts pending (chunk/round/limit bound reached)",
+      "texts_completed": 49645,
+      "texts_quarantined": 0
+    },
+    {
+      "ended_at": 1791650307.078746,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "resume",
+      "role": "enrich",
+      "session_id": "enrich-20261010T093116-0a5805",
+      "started_at": 1791649877.247123,
+      "stop_reason": "spend_cap: cap $150.00: spent $10.5508 + reserved $133.0470 + unreconciled $0.0000 + next $11.2650",
+      "texts_completed": 297537,
+      "texts_quarantined": 0
+    },
+    {
+      "ended_at": 1791650429.7796822,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "resume",
+      "role": "enrich",
+      "session_id": "enrich-20261010T094023-cbc96f",
+      "started_at": 1791650426.979567,
+      "stop_reason": "submit_failed: BadRequestError",
+      "texts_completed": 0,
+      "texts_quarantined": 0
+    },
+    {
+      "ended_at": 1791651035.081701,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "resume",
+      "role": "enrich",
+      "session_id": "enrich-20261010T094247-5eb14f",
+      "started_at": 1791650570.842732,
+      "stop_reason": "completed",
+      "texts_completed": 135944,
+      "texts_quarantined": 1063
+    },
+    {
+      "ended_at": 1791651059.9416819,
+      "label_config": "claude-haiku-4-5+enrich_v1+schema_v1+labels_v1+hae97c91b88",
+      "phase": "resume",
+      "role": "enrich",
+      "session_id": "enrich-20261010T095057-8810e3",
+      "started_at": 1791651058.7589362,
+      "stop_reason": "completed",
+      "texts_completed": 0,
+      "texts_quarantined": 0
+    }
+  ],
+  "total_cost_usd": 102.208755,
+  "usage_by_role": {
+    "enrich|claude-haiku-4-5|batch": {
+      "attempts": 10130,
+      "cache_creation_input_tokens": 1397792,
+      "cache_read_input_tokens": 57113088,
+      "cost_usd": 99.861626,
+      "failed": 2,
+      "input_tokens": 18499479,
+      "output_tokens": 34753045,
+      "succeeded": 10128,
+      "summed_call_seconds": 3574882.76
+    },
+    "group|claude-haiku-4-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.014393,
+      "failed": 0,
+      "input_tokens": 5528,
+      "output_tokens": 1773,
+      "succeeded": 1,
+      "summed_call_seconds": 18.27
+    },
+    "memo|claude-sonnet-5-5|standard": {
+      "attempts": 1,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 0.028452,
+      "failed": 0,
+      "input_tokens": 6411,
+      "output_tokens": 1563,
+      "succeeded": 1,
+      "summed_call_seconds": 10.56
+    },
+    "verify|claude-haiku-4-5|standard": {
+      "attempts": 387,
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "cost_usd": 2.304284,
+      "failed": 0,
+      "input_tokens": 917024,
+      "output_tokens": 277452,
+      "succeeded": 387,
+      "summed_call_seconds": 2215.86
+    }
+  },
+  "wall_clock_seconds_this_invocation": 617.94
+}

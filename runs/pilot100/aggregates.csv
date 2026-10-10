@@ -1,0 +1,17 @@
+rank,issue_id,name,product_area,complaint_count,severity_sum,mean_severity,priority_score,cancellation_count,severity_4_plus,severity_5,needs_review_count
+1,ISS-billing-premium_only_features,Basic features locked behind Premium paywall,billing_support,8,24,3.000000,24,0,0,0,1
+2,ISS-other-general_criticism,General app dissatisfaction,other,12,24,2.000000,24,2,0,0,3
+3,ISS-usability-ads,Excessive and intrusive ads,usability,8,17,2.125000,17,1,0,0,0
+4,ISS-playback-stops_or_pauses,Music stops or pauses unexpectedly,playback,3,9,3.000000,9,0,1,0,1
+5,ISS-usability-shuffle_and_song_choice,Limited skip and rewind controls,usability,3,9,3.000000,9,1,0,0,0
+6,ISS-access-login_failure,Account login not accepting credentials,access,2,8,4.000000,8,0,2,0,0
+7,ISS-playback-crash_or_wont_open,App crashes or fails to load,playback,2,8,4.000000,8,0,2,0,0
+8,ISS-catalog-recommendations_and_unwanted_songs,Poor playlist and recommendation quality,catalog,2,5,2.500000,5,0,0,0,1
+9,ISS-catalog-lyrics_availability,Lyrics missing or not displaying,catalog,2,4,2.000000,4,0,0,0,0
+10,ISS-catalog-missing_content,Limited music catalog selection,catalog,2,4,2.000000,4,0,0,0,0
+11,ISS-downloads-offline_mode,Offline mode not functioning,downloads,1,3,3.000000,3,0,0,0,0
+12,ISS-playback-connectivity,WiFi connection issues,playback,1,3,3.000000,3,0,0,0,0
+13,ISS-downloads-download_fails,Downloads stuck in progress,downloads,1,2,2.000000,2,0,0,0,0
+14,ISS-support-unhelpful_response,Poor customer support experience,billing_support,1,2,2.000000,2,0,0,0,1
+15,ISS-usability-navigation_and_controls,Autoplay cannot be disabled,usability,1,2,2.000000,2,0,0,0,0
+16,ISS-usability-ui_redesign,New home screen update poor design,usability,1,2,2.000000,2,0,0,0,0

@@ -1,0 +1,13 @@
+claim_id,subject,metric,value
+X01,AREA:usability,complaint_count,13
+X02,AREA:usability,severity_sum,30
+X03,AREA:usability,share_of_complaints,0.260000
+X04,AREA:usability,cancellation_count,2
+X05,ISS-usability-shuffle_and_song_choice,cancellation_count,1
+X06,AREA:billing_support,severity_sum,26
+X07,AREA:billing_support,complaint_count,9
+X08,AREA:billing_support,cancellation_count,0
+X09,AREA:playback,complaint_count,6
+X10,AREA:playback,severity_sum,20
+X11,AREA:playback,mean_severity,3.333333
+X12,AREA:playback,severity_4_plus,3

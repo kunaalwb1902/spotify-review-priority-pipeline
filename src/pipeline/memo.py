@@ -35,7 +35,8 @@ def build_pack(run_dir, run_summary):
     aggs = _csv(run_dir / "aggregates.csv")[:TOP_ISSUES]
     issues = {r["issue_id"]: r for r in _csv(run_dir / "issues.csv")}
     quotes = {}
-    with open(run_dir / "records.jsonl", encoding="utf-8") as f:
+    from .group import open_records
+    with open_records(run_dir / "records.jsonl") as f:
         wanted = {rid for a in aggs for rid in issues[a["issue_id"]]["example_review_ids"].split("|")[:QUOTES_PER_ISSUE] if rid}
         for line in f:
             r = json.loads(line)
@@ -101,6 +102,15 @@ def render_and_check(raw, pack):
     for rid in REVIEW_REF.findall(raw):
         if rid not in known_reviews:
             problems.append(f"review id not in evidence pack: {rid}")
+
+    # 3b. Every double-quoted quotation must be an exact pack quote AND be followed by its [review ID].
+    for m in re.finditer(r'"([^"]{12,})"', raw):
+        after = raw[m.end():m.end() + 80]
+        ref = REVIEW_REF.search(after)
+        if not ref or ref.start() > 3:
+            problems.append(f"quotation without [review ID]: {m.group(1)[:50]!r}")
+        elif known_reviews.get(ref.group(1)) is not None and m.group(1) not in known_reviews[ref.group(1)]:
+            problems.append(f"quotation not found in cited review's evidence quote: {m.group(1)[:50]!r}")
 
     # 4. Render: every number comes from the saved table and carries its claim ID.
     def sub(m):
