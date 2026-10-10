@@ -42,7 +42,7 @@ Measured results and estimates are kept apart throughout. Accounted-for rows (66
 | **T2** Independent verification, planted errors, injection | [verify.py](src/pipeline/verify.py) · [verifier_summary.json](evals/full/verifier_summary.json) · [verifier_disagreements.csv](evals/full/verifier_disagreements.csv) · [planted_errors.csv](evals/full/planted_errors.csv) · [injection_results.csv](evals/system_tests/injection_results.csv) |
 | **T3** Cold/warm pilot, calculator, retry/spend/recovery controls | [cost/report.md](cost/report.md) · [cost/calculator.py](cost/calculator.py) · [pilot_calls.jsonl](cost/pilot_calls.jsonl) · [usage.csv](cost/usage.csv) · [rates.csv](cost/rates.csv) · [scaling_refresh.md](cost/scaling_refresh.md) · [controls demonstrated](#controls-demonstrated-in-real-runs) · 30 offline tests in [tests/](tests/) |
 | **W1** Full ingestion, coverage, classification | [ingestion_report.json](runs/full/ingestion_report.json) · `grading/records.jsonl.gz` · [self-check.json](runs/full/self-check.json) |
-| **W2** Staged program, bounded calls, handoffs, resume | [cli.py](cli.py) · [orchestrator.py](src/pipeline/orchestrator.py) · ≤ 50 reviews per enrichment request (checker: no `unbounded_batch`) · `checkpoint_before/after.json` · **interruption recording:** _RECORDING_LINK_ |
+| **W2** Staged program, bounded calls, handoffs, resume | [cli.py](cli.py) · [orchestrator.py](src/pipeline/orchestrator.py) · ≤ 50 reviews per enrichment request (checker: no `unbounded_batch`) · `checkpoint_before/after.json` · **interruption recording:** [interruption & resume recording (Google Drive)](https://drive.google.com/file/d/12M52kzaOMwgr1PUfi3xm4AG2C-RGESEc/view?usp=sharing) |
 | **W3** Reproducible ranking, grounded output | `python cli.py rank --run runs/full` (no model, no key) → [ranking.csv](runs/full/ranking.csv), sha256 `d481f928…4e064` · [aggregates.csv](runs/full/aggregates.csv) · [area_rollup.csv](runs/full/area_rollup.csv) · [monthly_trend.csv](runs/full/monthly_trend.csv) |
 
 ---
@@ -196,7 +196,7 @@ Paid pilot execution is a separate, explicit command:
 ### Controls demonstrated in real runs
 | Control | Real event |
 |---|---|
-| **Interruption → resume** | Full run: initial session (2 batches, 49,645 texts) → **Ctrl-C** → resume collected in-flight work without resubmitting → `checkpoint_before.json` (frozen at the interruption) ⊂ `checkpoint_after.json`. Screen recording: _RECORDING_LINK_ |
+| **Interruption → resume** | Full run: initial session (2 batches, 49,645 texts) → **Ctrl-C** → resume collected in-flight work without resubmitting → `checkpoint_before.json` (frozen at the interruption) ⊂ `checkpoint_after.json`. Screen recording: [interruption & resume recording (Google Drive)](https://drive.google.com/file/d/12M52kzaOMwgr1PUfi3xm4AG2C-RGESEc/view?usp=sharing) |
 | **Spend cap** | Resume session stopped at `spend_cap: spent $10.55 + reserved $133.05 + next $11.27 > $150`. Worst-case reservations for 12 in-flight batches hit the cap. Fixed (commit `839f831`) so that reservation pressure **waits and continues**, and only a cap with nothing in flight stops the run. |
 | **Fatal API error** | `credit balance is too low` (HTTP 400) → submission rejected, **0 texts quarantined**, all left pending → resumed after top-up |
 | **Retry once** | 2,818 + 1,636 retry texts in groups of ≤ 10; 1,063 still invalid → quarantined (`attempts: 2`) |
