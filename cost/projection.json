@@ -1,0 +1,273 @@
+{
+  "measured": {
+    "cold": {
+      "stages": {
+        "enrich": {
+          "models": [
+            "claude-haiku-4-5",
+            "claude-sonnet-5-5"
+          ],
+          "tiers": [
+            "standard"
+          ],
+          "attempts": 4,
+          "succeeded": 4,
+          "failed": 0,
+          "retries": 1,
+          "fallbacks": 1,
+          "usage_missing": 0,
+          "tokens": {
+            "input_tokens": 3802,
+            "cache_creation_input_tokens": 13523,
+            "output_tokens": 6828,
+            "cache_read_input_tokens": 11552
+          },
+          "cost_usd": 0.0663677,
+          "summed_call_seconds": 59.8,
+          "stage_wall_seconds": 59.811
+        },
+        "verify": {
+          "models": [
+            "claude-haiku-4-5"
+          ],
+          "tiers": [
+            "standard"
+          ],
+          "attempts": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {
+            "input_tokens": 1791,
+            "output_tokens": 323
+          },
+          "cost_usd": 0.003406,
+          "summed_call_seconds": 3.55,
+          "stage_wall_seconds": 3.557
+        },
+        "group": {
+          "models": [
+            "claude-haiku-4-5"
+          ],
+          "tiers": [
+            "standard"
+          ],
+          "attempts": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {
+            "input_tokens": 1424,
+            "output_tokens": 708
+          },
+          "cost_usd": 0.004964,
+          "summed_call_seconds": 9.09,
+          "stage_wall_seconds": 9.095
+        },
+        "memo": {
+          "models": [
+            "claude-sonnet-5-5"
+          ],
+          "tiers": [
+            "standard"
+          ],
+          "attempts": 1,
+          "succeeded": 1,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {
+            "input_tokens": 5377,
+            "output_tokens": 1548
+          },
+          "cost_usd": 0.026234,
+          "summed_call_seconds": 10.81,
+          "stage_wall_seconds": 10.823
+        }
+      },
+      "api_cost_usd": 0.1009717,
+      "wall_clock_seconds": 83.35,
+      "input_rows": 100,
+      "completed_records": 100,
+      "failed_records": 0,
+      "unique_texts": 100,
+      "result_cache_hits": 0,
+      "new_enrichment_calls": 4,
+      "cost_per_1000_inputs_usd": 1.009717,
+      "cost_per_completed_record_usd": 0.001009717,
+      "throughput_records_per_second": 1.2
+    },
+    "warm": {
+      "stages": {
+        "enrich": {
+          "models": [],
+          "tiers": [],
+          "attempts": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {},
+          "cost_usd": 0,
+          "summed_call_seconds": 0,
+          "stage_wall_seconds": 0.001
+        },
+        "verify": {
+          "models": [],
+          "tiers": [],
+          "attempts": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {},
+          "cost_usd": 0,
+          "summed_call_seconds": 0,
+          "stage_wall_seconds": 0.002
+        },
+        "group": {
+          "models": [],
+          "tiers": [],
+          "attempts": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {},
+          "cost_usd": 0,
+          "summed_call_seconds": 0,
+          "stage_wall_seconds": 0.001
+        },
+        "memo": {
+          "models": [],
+          "tiers": [],
+          "attempts": 0,
+          "succeeded": 0,
+          "failed": 0,
+          "retries": 0,
+          "fallbacks": 0,
+          "usage_missing": 0,
+          "tokens": {},
+          "cost_usd": 0,
+          "summed_call_seconds": 0,
+          "stage_wall_seconds": 0.002
+        }
+      },
+      "api_cost_usd": 0,
+      "wall_clock_seconds": 0.04,
+      "input_rows": 100,
+      "completed_records": 100,
+      "failed_records": 0,
+      "unique_texts": 100,
+      "result_cache_hits": 100,
+      "new_enrichment_calls": 0,
+      "cost_per_1000_inputs_usd": 0.0,
+      "cost_per_completed_record_usd": 0.0,
+      "throughput_records_per_second": 2500.0
+    }
+  },
+  "projection": {
+    "assumptions": {
+      "tier": "batch",
+      "batch_size": 50,
+      "workers": 4,
+      "budget_usd": 150.0,
+      "output_token_cap_per_review": 110,
+      "verify_fraction": 0.02,
+      "retry_rate_base": 0.02,
+      "fallback_fraction_max": 0.002,
+      "fallback_model": "claude-sonnet-5-5",
+      "measured_fallback_rate": 0.01,
+      "measured_cost_per_fallback_usd": 0.02073,
+      "measured_per_text": {
+        "input_tokens": 38.02,
+        "cache_creation_input_tokens": 135.23,
+        "output_tokens": 68.28,
+        "cache_read_input_tokens": 115.52
+      },
+      "system_prompt_tokens_per_request": 6268.8,
+      "summed_call_seconds_per_text": 0.598,
+      "note": "Batch-tier figures are ESTIMATES (pilot used the standard tier). Batch API turnaround is asynchronous (up to 24h); sync hours shown assume the stated worker count."
+    },
+    "volume": {
+      "rows": 660622,
+      "nonempty": 660609,
+      "empty": 13,
+      "distinct_nonempty": 484189
+    },
+    "scenarios": [
+      {
+        "scenario": "base",
+        "exact_text_reuse": true,
+        "tier": "batch",
+        "texts_to_classify": 484189,
+        "requests": 9684,
+        "retry_rate": 0.02,
+        "fallback_fraction": 0.01,
+        "enrich_usd": 151.44,
+        "verify_usd": 1.65,
+        "fixed_group_memo_usd": 0.0312,
+        "total_api_usd": 153.12,
+        "est_hours_sync": 20.5,
+        "workers": 4,
+        "exceeds_budget": true
+      },
+      {
+        "scenario": "base",
+        "exact_text_reuse": false,
+        "tier": "batch",
+        "texts_to_classify": 660609,
+        "requests": 13213,
+        "retry_rate": 0.02,
+        "fallback_fraction": 0.01,
+        "enrich_usd": 204.97,
+        "verify_usd": 2.25,
+        "fixed_group_memo_usd": 0.0312,
+        "total_api_usd": 207.25,
+        "est_hours_sync": 28.0,
+        "workers": 4,
+        "exceeds_budget": true
+      },
+      {
+        "scenario": "conservative",
+        "exact_text_reuse": true,
+        "tier": "batch",
+        "texts_to_classify": 484189,
+        "requests": 9684,
+        "retry_rate": 0.06,
+        "fallback_fraction": 0.01,
+        "enrich_usd": 155.11,
+        "verify_usd": 1.65,
+        "fixed_group_memo_usd": 0.0468,
+        "total_api_usd": 156.81,
+        "est_hours_sync": 32.0,
+        "workers": 4,
+        "exceeds_budget": true
+      },
+      {
+        "scenario": "conservative",
+        "exact_text_reuse": false,
+        "tier": "batch",
+        "texts_to_classify": 660609,
+        "requests": 13213,
+        "retry_rate": 0.06,
+        "fallback_fraction": 0.01,
+        "enrich_usd": 209.98,
+        "verify_usd": 2.25,
+        "fixed_group_memo_usd": 0.0468,
+        "total_api_usd": 212.28,
+        "est_hours_sync": 43.6,
+        "workers": 4,
+        "exceeds_budget": true
+      }
+    ]
+  }
+}

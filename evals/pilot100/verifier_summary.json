@@ -1,0 +1,32 @@
+{
+  "declared_sample": {
+    "seed": 20261013,
+    "fraction": 0.02,
+    "min_n": 10,
+    "population_completed_originals": 100,
+    "sampled": 10
+  },
+  "verifier_missing": 0,
+  "topic_agreement": 0.8,
+  "intent_agreement": 0.9,
+  "severity_exact_agreement": 0.8,
+  "severity_mae": 0.2,
+  "disagreements": 3,
+  "disagreement_fields": {
+    "topic": 2,
+    "intent": 1
+  },
+  "verifier_unsure": 2,
+  "enricher_needs_review_among_disagreements": 2,
+  "planted_errors": {
+    "cases": 10,
+    "caught": 10,
+    "by_field": {
+      "topic": "4/4",
+      "intent": "3/3",
+      "severity": "3/3"
+    }
+  },
+  "note": "Agreement between two model roles is a consistency signal, not accuracy; the golden set measures accuracy.",
+  "new_verify_calls": 0
+}

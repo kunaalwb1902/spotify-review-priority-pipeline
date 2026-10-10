@@ -1,0 +1,4 @@
+review_id,text,enrich_topic,enrich_intent,enrich_severity,enrich_needs_review,evidence_quote,verifier_status,verify_topic,verify_intent,verify_severity,verify_unsure,topic_agree,intent_agree,severity_abs_diff,disagree_fields
+45c561b9-cc47-4d80-95d3-f0d20bc84af3,The update made the app useless .... Uninstall krdia ye app ab bekar hai ... Wynk hi theek h,other,cancellation,2,True,Uninstall krdia ye app ab bekar hai,ok,usability,cancellation,3,True,False,True,1,topic
+7084ced1-0428-4093-9328-442f74719b4f,I am using Spotify from past two years From last update they removed basic features of music player,billing,complaint,3,False,From last update they removed basic features of music player,ok,usability,complaint,3,False,False,True,0,topic
+084077ee-f9be-446a-9935-9e58550d5153,Thik thak hi hai,other,praise,1,True,Thik thak hi hai,ok,other,unclear,1,False,True,False,0,intent

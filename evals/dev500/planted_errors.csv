@@ -1,0 +1,11 @@
+synthetic_case_id,source_review_id,field,original_label,planted_wrong_label,verifier_label,caught,synthetic
+SYN-PLANT-0001,f782a3f3-b0c8-475c-a34c-cda0fefa272e,topic,billing,support,billing,True,True
+SYN-PLANT-0002,130820bc-da31-46d3-9088-b09cb62cf241,intent,complaint,praise,complaint,True,True
+SYN-PLANT-0003,cf71ae94-ac5f-49e1-bf3b-363d272af12d,severity,1,5,1,True,True
+SYN-PLANT-0004,9eb1e5bd-44a3-4f35-b86c-1bfa8d2d30b8,topic,other,support,other,True,True
+SYN-PLANT-0005,347e23c3-b84f-49f3-8d7a-da9f797d3790,intent,unclear,cancellation,unclear,True,True
+SYN-PLANT-0006,46b77196-0d17-4a48-b376-03a50b3d7440,severity,1,5,1,True,True
+SYN-PLANT-0007,45c561b9-cc47-4d80-95d3-f0d20bc84af3,topic,other,support,usability,True,True
+SYN-PLANT-0008,68107809-52c1-469d-a78a-569280e49ed6,intent,complaint,praise,complaint,True,True
+SYN-PLANT-0009,7084ced1-0428-4093-9328-442f74719b4f,severity,3,1,3,True,True
+SYN-PLANT-0010,c13dcedc-50da-48a8-a90d-cfb037a66478,topic,billing,support,usability,True,True

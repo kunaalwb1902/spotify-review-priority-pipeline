@@ -53,6 +53,10 @@ def main():
     p.add_argument("--max-batches", type=int, help="stop after N batches (interruption demo)")
     p.add_argument("--workers", type=int, help="override config/run.yaml controls.workers")
     p.add_argument("--batch-size", type=int, help="reviews per request (1-50)")
+    p.add_argument("--transport", choices=["sync", "batch"], default="sync", help="batch = Message Batches API (50%% off, async)")
+    p.add_argument("--chunk-requests", type=int, default=500, help="batch transport: requests per submitted batch")
+    p.add_argument("--max-chunks", type=int, help="batch transport: stop after submitting N batches")
+    p.add_argument("--poll-seconds", type=int, default=60)
     add("records", "write records.jsonl (one final record per source ID)")
     add("verify", "Stage 3: blind re-label of the declared sample + planted errors", paid=True)
     p = add("group", "Stage 4: issue membership (code) + issue names (model)", paid=True)
@@ -96,10 +100,16 @@ def main():
     con = connect(run / "pipeline.db")
 
     if args.cmd == "enrich":
-        from pipeline.enrich import Enricher
         from pipeline.llm import load_rates
-        Enricher(con, run, enr, cfg, load_rates(), _client(cfg)).run(
-            limit=args.limit, max_batches=args.max_batches, workers=args.workers)
+        if args.transport == "batch":
+            from pipeline.batch_enrich import BatchEnricher
+            BatchEnricher(con, run, enr, cfg, load_rates(), _client(cfg)).run_batch(
+                limit=args.limit, chunk_requests=args.chunk_requests, max_chunks=args.max_chunks,
+                poll_seconds=args.poll_seconds)
+        else:
+            from pipeline.enrich import Enricher
+            Enricher(con, run, enr, cfg, load_rates(), _client(cfg)).run(
+                limit=args.limit, max_batches=args.max_batches, workers=args.workers)
 
     elif args.cmd == "records":
         from pipeline.records import write_records

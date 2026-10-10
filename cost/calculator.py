@@ -152,6 +152,10 @@ def projection(meas, rates, a):
         r = rates.get((model, tier, field))
         return r["per_token"] if r else None
 
+    fb_calls = [c for c in a._calls if c["pilot_run"] == "cold" and c.get("purpose") == "fallback"] if getattr(a, "_calls", None) else []
+    measured_fb_cost = (sum(c["cost_usd"] for c in fb_calls) / len(fb_calls)) if fb_calls else None
+    measured_fb_rate = len(fb_calls) / texts
+
     def enrich_cost(n_texts, tier, retry_rate, fallback_frac):
         n_req = math.ceil(n_texts / a.batch_size)
         p = lambda f: price(model, tier, f)
@@ -166,7 +170,9 @@ def projection(meas, rates, a):
         fb_model = a.fallback_model
         fb = rates.get((fb_model, "standard", "output_tokens"))
         fb_cost = 0.0
-        if fb:
+        if measured_fb_cost is not None:                    # prefer the MEASURED cost per fallback request
+            fb_cost = fallback_frac * n_texts * measured_fb_cost * (0.5 if tier == "batch" else 1.0)
+        elif fb:
             per_fb = (sys_tokens * rates[(fb_model, "standard", "input_tokens")]["per_token"]
                       + var["input_tokens"] * rates[(fb_model, "standard", "input_tokens")]["per_token"]
                       + var["output_tokens"] * fb["per_token"] + 200 * fb["per_token"])
@@ -179,8 +185,9 @@ def projection(meas, rates, a):
     fixed = cold["stages"]["group"]["cost_usd"] + cold["stages"]["memo"]["cost_usd"]   # once per run, NOT per review
 
     scenarios = []
-    for name, tier, retry, fb, slow in (("base", a.tier, a.retry_rate, a.fallback_fraction, 1.0),
-                                        ("conservative", a.tier, a.retry_rate * 3, min(0.01, a.fallback_fraction * 3) if a.fallback_fraction else 0.01, 1.5)):
+    base_fb = max(a.fallback_fraction, min(0.01, measured_fb_rate))
+    for name, tier, retry, fb, slow in (("base", a.tier, a.retry_rate, base_fb, 1.0),
+                                        ("conservative", a.tier, a.retry_rate * 3, 0.01, 1.5)):
         for reuse in (True, False):
             n = FULL["distinct_nonempty"] if reuse else FULL["nonempty"]
             ec = enrich_cost(n, tier, retry, fb)
@@ -198,6 +205,8 @@ def projection(meas, rates, a):
                             "output_token_cap_per_review": a.output_cap, "verify_fraction": a.verify_fraction,
                             "retry_rate_base": a.retry_rate, "fallback_fraction_max": a.fallback_fraction,
                             "fallback_model": a.fallback_model,
+                            "measured_fallback_rate": round(measured_fb_rate, 4),
+                            "measured_cost_per_fallback_usd": None if measured_fb_cost is None else round(measured_fb_cost, 5),
                             "measured_per_text": {k: round(v, 2) for k, v in per_text_tokens.items()},
                             "system_prompt_tokens_per_request": round(sys_tokens, 1),
                             "summed_call_seconds_per_text": round(secs_per_text, 4),
@@ -255,7 +264,7 @@ def render(meas, proj, rates, unpriced, a):
                  f"{s['enrich_usd']} | {s['verify_usd']} | {s['fixed_group_memo_usd']} | **{s['total_api_usd']}** | "
                  f"{s['est_hours_sync']} | {flag} |")
     L += ["", f"Budget: **${a.budget:.2f}** · max workers {a.workers} · output cap {a.output_cap} tokens/review · "
-          f"fallback ≤ {a.fallback_fraction:.0%} of texts ({a.fallback_model}).", ""]
+          f"fallback cap 1% of texts ({a.fallback_model}); base scenario uses max(assumed, measured) rate.", ""]
     return "\n".join(L)
 
 
@@ -269,6 +278,7 @@ def offline(a):
     meta = json.loads((COST / "pilot_meta.json").read_text())
     meas = measured(calls, priced, meta)
     a.pilot_verify_n = meta.get("cold", {}).get("verify_sample", 10)
+    a._calls = calls
     proj = projection(meas, rates, a)
     report = render(meas, proj, rates, unpriced, a)
     out = Path(a.out)

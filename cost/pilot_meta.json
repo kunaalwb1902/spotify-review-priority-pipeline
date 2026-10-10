@@ -1,0 +1,43 @@
+{
+  "cold": {
+    "wall_clock_seconds": 83.35,
+    "stage_seconds": {
+      "ingest": 0.005,
+      "enrich": 59.811,
+      "records": 0.004,
+      "verify": 3.557,
+      "group": 9.095,
+      "rank": 0.006,
+      "memo": 10.823,
+      "export": 0.01
+    },
+    "input_rows": 100,
+    "completed_records": 100,
+    "failed_records": 0,
+    "unique_texts": 100,
+    "result_cache_hits": 0,
+    "new_model_calls": 7,
+    "started_at": 1791620605.4812732,
+    "verify_sample": 10
+  },
+  "warm": {
+    "wall_clock_seconds": 0.04,
+    "stage_seconds": {
+      "enrich": 0.001,
+      "records": 0.001,
+      "verify": 0.002,
+      "group": 0.001,
+      "rank": 0.002,
+      "memo": 0.002,
+      "export": 0.003
+    },
+    "input_rows": 100,
+    "completed_records": 100,
+    "failed_records": 0,
+    "unique_texts": 100,
+    "result_cache_hits": 100,
+    "new_model_calls": 0,
+    "started_at": 1791620688.829115,
+    "verify_sample": 10
+  }
+}

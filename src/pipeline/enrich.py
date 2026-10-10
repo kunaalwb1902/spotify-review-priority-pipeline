@@ -44,6 +44,10 @@ CREATE TABLE IF NOT EXISTS text_quarantine (
     reason TEXT NOT NULL, attempts INTEGER NOT NULL, last_request_id TEXT, session_id TEXT, created_at REAL,
     PRIMARY KEY (text_sha256, label_config)
 );
+CREATE TABLE IF NOT EXISTS validation_failures (
+    review_id TEXT, text_sha256 TEXT, purpose TEXT, model TEXT, reason TEXT, request_id TEXT,
+    session_id TEXT, created_at REAL
+);
 CREATE TABLE IF NOT EXISTS sessions (
     session_id TEXT PRIMARY KEY, role TEXT, label_config TEXT, phase TEXT, started_at REAL, ended_at REAL,
     stop_reason TEXT, texts_completed INTEGER, texts_quarantined INTEGER
@@ -169,6 +173,7 @@ class Enricher:
         batch = [{"i": n, **t} for n, t in enumerate(texts, 1)]
         attempts = {b["i"]: 0 for b in batch}
         saved, last_reason, req_of = {}, {}, {}
+        fail_log = []                                         # every invalid item, even if later rescued
         api_failed = False
         budget_stop = None
         fatal = None
@@ -208,11 +213,13 @@ class Enricher:
                 else:
                     last_reason[x["orig_i"]] = bad.get(x["i"], "unknown")
                     req_of[x["orig_i"]] = res.request_ids[-1] if res.request_ids else None
+                    fail_log.append((x["review_id"], x["text_sha256"], purpose, model or self.s["model"],
+                                     last_reason[x["orig_i"]], req_of[x["orig_i"]]))
 
         run(batch, "first")
         if api_failed or budget_stop or fatal:
             return {"saved": saved, "quarantine": {}, "api_failed": api_failed, "budget_stop": budget_stop,
-                    "fatal": fatal, "batch": batch, "attempts": attempts, "req": req_of}
+                    "fatal": fatal, "batch": batch, "attempts": attempts, "req": req_of, "fail_log": fail_log}
         retry = [b for b in batch if b["i"] not in saved]
         if retry:
             run(retry, "retry_invalid")                         # the ONE invalid-output retry
@@ -228,7 +235,7 @@ class Enricher:
             if b["i"] not in saved and not (budget_stop or fatal):
                 quarantine[b["i"]] = last_reason.get(b["i"], "unknown")
         return {"saved": saved, "quarantine": quarantine, "api_failed": api_failed, "budget_stop": budget_stop,
-                "fatal": fatal, "batch": batch, "attempts": attempts, "req": req_of}
+                "fatal": fatal, "batch": batch, "attempts": attempts, "req": req_of, "fail_log": fail_log}
 
     def _take_fallback_slot(self):
         with self.lock:
@@ -242,6 +249,9 @@ class Enricher:
         now = time.time()
         with self.lock:
             with self.con:                                       # one transaction per batch = atomic
+                for f in out.get("fail_log", []):
+                    self.con.execute("INSERT INTO validation_failures VALUES (?,?,?,?,?,?,?,?)",
+                                     (*f, self.session_id, now))
                 for b in out["batch"]:
                     i = b["i"]
                     if i in out["saved"]:
@@ -266,7 +276,8 @@ class Enricher:
                                  (self.label_config,)).fetchone()[0]
         phase = "resume" if prior else "initial"
         started = time.time()
-        if phase == "resume":
+        if phase == "resume" and not (self.run_dir / "checkpoint_before.json").exists():
+            # first resume only: the snapshot marks the real interruption point and is never overwritten
             write_json(self.run_dir / "checkpoint_before.json",
                        {"label_config": self.label_config, "saved_at": started,
                         "completed_ids": completed_review_ids(self.con, self.label_config)})

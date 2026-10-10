@@ -1,0 +1,74 @@
+{
+  "pilot100 (cost_100.csv)": {
+    "rows": 100,
+    "distinct_texts": 100,
+    "enrich_requests": 4,
+    "enrich_failed_calls": 0,
+    "retry_requests": 1,
+    "fallback_requests": 1,
+    "tier": "standard",
+    "tokens": {
+      "input": 3802,
+      "cache_write": 13523,
+      "cache_read": 11552,
+      "output": 6828
+    },
+    "output_tokens_per_text": 68.3,
+    "enrich_cost_usd": 0.066368,
+    "enrich_cost_per_text_usd": 0.000663677,
+    "texts_with_any_invalid_output": null,
+    "invalid_rate": null,
+    "quarantined_texts": 0,
+    "quarantine_rate": 0.0,
+    "downstream_cost_usd": 0.034604,
+    "enrich_session_seconds": 59.8
+  },
+  "dev500 (checkpoint_500.csv)": {
+    "rows": 500,
+    "distinct_texts": 479,
+    "enrich_requests": 13,
+    "enrich_failed_calls": 0,
+    "retry_requests": 2,
+    "fallback_requests": 1,
+    "tier": "standard",
+    "tokens": {
+      "input": 16723,
+      "cache_write": 19299,
+      "cache_read": 57760,
+      "output": 32357
+    },
+    "output_tokens_per_text": 67.6,
+    "enrich_cost_usd": 0.218775,
+    "enrich_cost_per_text_usd": 0.00045673173277661796,
+    "texts_with_any_invalid_output": 2,
+    "invalid_rate": 0.0042,
+    "quarantined_texts": 0,
+    "quarantine_rate": 0.0,
+    "downstream_cost_usd": 0.042321,
+    "enrich_session_seconds": 133.3
+  },
+  "dev10k (analysis_10000.csv)": {
+    "rows": 10000,
+    "distinct_texts": 8448,
+    "enrich_requests": 171,
+    "enrich_failed_calls": 0,
+    "retry_requests": 2,
+    "fallback_requests": 0,
+    "tier": "batch",
+    "tokens": {
+      "input": 298806,
+      "cache_write": 277248,
+      "cache_read": 710448,
+      "output": 589041
+    },
+    "output_tokens_per_text": 69.7,
+    "enrich_cost_usd": 1.830808,
+    "enrich_cost_per_text_usd": 0.00021671495028409093,
+    "texts_with_any_invalid_output": 62,
+    "invalid_rate": 0.0073,
+    "quarantined_texts": 24,
+    "quarantine_rate": 0.0028,
+    "downstream_cost_usd": 0.084124,
+    "enrich_session_seconds": 249.6
+  }
+}

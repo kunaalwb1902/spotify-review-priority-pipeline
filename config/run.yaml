@@ -32,7 +32,8 @@ memo:
 
 fallback:
   model: claude-sonnet-5-5
-  max_fraction: 0.01        # at most 1% of distinct texts may use the stronger model
+  max_fraction: 0.0         # full run: OFF (decided 2026-10-10). Pilot/500 used 1% cap; rescues add
+                            # call_config_mismatch flags, so twice-invalid texts are quarantined instead.
 
 controls:
   spend_cap_usd: 150.00     # hard stop: spent + reserved + next reservation > cap
