@@ -50,36 +50,49 @@ def choose_sample(records_path, seed, fraction, min_n):
     return originals[:n], len(originals)
 
 
-def run_verifier(con, llm, run_cfg, labels, sample, texts):
-    """Returns {review_id: {topic, intent, sev, unsure}} and the number of new model calls."""
+def run_verifier(con, llm, run_cfg, labels, sample, texts, workers=4):
+    """Returns {review_id: {topic, intent, sev, unsure}} and the number of new model calls.
+    Chunks run concurrently; every DB touch (cache + call log) goes through llm.db_lock."""
+    from concurrent.futures import ThreadPoolExecutor
     v = run_cfg["verify"]
     system, schema = render_verifier_system(labels), verifier_schema(labels)
-    out, new_calls = {}, 0
-    for k in range(0, len(sample), BATCH):
-        chunk = sample[k:k + BATCH]
+    chunks = [sample[k:k + BATCH] for k in range(0, len(sample), BATCH)]
+
+    def one(chunk):
         items = [{"i": n, "text": texts[r["review_id"]]} for n, r in enumerate(chunk, 1)]
         key = cache_key("verify", system, schema, v["model"], items)
-        cached, _ = cache_get(con, key)
+        with llm.db_lock:
+            cached, _ = cache_get(con, key)
+        called = 0
         if cached is None:
             user = (f"Label each of these {len(items)} reviews.\n<reviews>\n"
                     + json.dumps(items, ensure_ascii=False) + "\n</reviews>")
             res = llm.call(role="verify", model=v["model"], system=system, user=user, schema=schema,
                            max_tokens=40 * len(items) + 200, review_ids=[r["review_id"] for r in chunk],
                            temperature=0, purpose="blind_relabel", cache_system=False)
-            new_calls += 1
+            called = 1
             if not res.ok:
-                continue                                      # missing verifier labels are reported, not invented
+                return {}, called                             # missing verifier labels are reported, not invented
             try:
                 cached = json.loads(res.text)["results"]
             except (ValueError, KeyError):
-                continue
-            cache_put(con, key, "verify", cached, res.request_ids[-1])
+                return {}, called
+            with llm.db_lock:
+                cache_put(con, key, "verify", cached, res.request_ids[-1])
         by_i = {x.get("i"): x for x in cached if isinstance(x, dict)}
+        got = {}
         for n, r in enumerate(chunk, 1):
             x = by_i.get(n)
             if x and x.get("topic") in labels["topics"] and x.get("intent") in labels["intents"] \
                     and x.get("sev") in (1, 2, 3, 4, 5) and isinstance(x.get("unsure"), bool):
-                out[r["review_id"]] = {"topic": x["topic"], "intent": x["intent"], "sev": x["sev"], "unsure": x["unsure"]}
+                got[r["review_id"]] = {"topic": x["topic"], "intent": x["intent"], "sev": x["sev"], "unsure": x["unsure"]}
+        return got, called
+
+    out, new_calls = {}, 0
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for got, called in pool.map(one, chunks):
+            out.update(got)
+            new_calls += called
     return out, new_calls
 
 
